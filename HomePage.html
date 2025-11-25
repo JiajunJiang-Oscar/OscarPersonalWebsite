@@ -275,12 +275,7 @@
 
     const titleEl = document.querySelector('.hero-title');
     if (titleEl && TEXT.heroTitle) {
-      const words = TEXT.heroTitle.split(' ');
-      if (words.length === 4) {
-        titleEl.innerHTML = `${words[0]}<br />${words[1]} ${words[2]}<br />${words[3]}`;
-      } else {
-        titleEl.textContent = TEXT.heroTitle;
-      }
+      titleEl.innerHTML = TEXT.heroTitle.join("<br>");
     }
 
     const ctaEl = document.querySelector('.hero-cta');

@@ -1,10 +1,10 @@
 const TEXT = {
-  heroTitle: "EMBARK ON AN ADVENTURE",
-  heroSubtitle: "Explore our insights →",
+  heroTitle: ["Move forward", "understand the world", "then help build it."],
+  heroSubtitle: "Explore my story →",
 
   navHome: "Home",
   navAbout: "About",
   navBlog: "Blog",
 
-  brandName: "BUTE",
+  brandName: "OSCAR",
 };
