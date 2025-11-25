@@ -129,15 +129,11 @@
       link.addEventListener('click', closeMenu);
     });
 
-    /* ===== 从 Content.js 注入文字 ===== */
-
-    // Logo
     const logoEl = document.querySelector('[data-text="brand-name"]');
-    if (logoEl && TEXT.brandName) {
-      logoEl.textContent = TEXT.brandName;
+    if (logoEl && TEXT.logoText) {
+      logoEl.textContent = TEXT.logoText;
     }
 
-    // section label / 标题 / tagline
     const aboutLabelEl   = document.querySelector('[data-text="about-section-label"]');
     const aboutHeadingEl = document.querySelector('[data-text="about-heading"]');
     const aboutTaglineEl = document.querySelector('[data-text="about-tagline"]');
@@ -146,7 +142,6 @@
     if (aboutHeadingEl && TEXT.aboutHeading)    aboutHeadingEl.textContent = TEXT.aboutHeading;
     if (aboutTaglineEl && TEXT.aboutTagline)    aboutTaglineEl.textContent = TEXT.aboutTagline;
 
-    // 主体段落
     const aboutBodyEl = document.getElementById('about-body');
     if (aboutBodyEl && Array.isArray(TEXT.aboutParagraphs)) {
       aboutBodyEl.innerHTML = TEXT.aboutParagraphs

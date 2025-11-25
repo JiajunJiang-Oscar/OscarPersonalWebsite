@@ -6,7 +6,7 @@ const TEXT = {
   navAbout: "About",
   navBlog: "Blog",
 
-  brandName: "OSCAR",
+  logoText: "OSCAR",
 
   aboutPageTitle: "About – Oscar",
   aboutSectionLabel: "ABOUT",
