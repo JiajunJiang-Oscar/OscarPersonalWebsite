@@ -20,11 +20,9 @@ a {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* 淡入关键：初始看不见 */
     opacity: 0;
-    transition: opacity 1.5s ease;  /* 时间可以改成 1.0 / 1.5 看你喜欢 */
+    transition: opacity 1.3s ease;
 }
-/* 加上这个类之后就会变成不透明 */
 .page.fade-in {
     opacity: 1;
 }
@@ -146,6 +144,21 @@ main {
 }
 .card-list li + li {
     margin-top: 0.5rem;
+}
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    width: 300px;            /* 你可以调成 120~200px */
+    height: 200px;
+    border-radius: 12px;     /* 圆角，如果你想圆形就改成50% */
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.5);
 }
 .pill-row {
     margin-top: 1rem;
