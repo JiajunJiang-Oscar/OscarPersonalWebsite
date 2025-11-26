@@ -73,6 +73,34 @@ a {
     font-size: 0.9rem;
 }
 
+/* Language toggle (match secondary pages) */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.85);
+    color: #e5e7eb;
+    font-size: 0.7rem;
+    cursor: pointer;
+    outline: none;
+}
+.lang-toggle:hover {
+    background: rgba(15, 23, 42, 1);
+}
+.lang-toggle .lang-option {
+    opacity: 0.6;
+}
+.lang-toggle .lang-option.active {
+    opacity: 1;
+    font-weight: 600;
+}
+.lang-toggle .lang-separator {
+    opacity: 0.4;
+}
+
 /* Menu button */
 .menu-toggle {
     border: none;

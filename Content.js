@@ -8,13 +8,13 @@ const TEXT = {
 
     logoText: "OSCAR",
 
-    aboutPageTitle: "About – Oscar",
-    aboutSectionLabel: "ABOUT",
-    aboutHeading: "My Autobiography",
-    aboutTagline: "Cybersecurity student based in Singapore.",
+    autobiographyPageTitle: "Autobiography – Oscar",
+    autobiographySectionLabel: "AUTOBIOGRAPHY",
+    autobiographyHeading: "My Autobiography",
+    autobiographyTagline: "Cybersecurity student based in Singapore.",
 
   // 故事段落
-    aboutParagraphs: [
+    autobiographyParagraphs: [
         "My name is Jiang Jiajun. You can call me Oscar. I am a student studying cybersecurity at James Cook " +
         "University. The reason I created this website is to showcase myself in front of everyone and share my story as " +
         "well as my portfolio during my school years. Hope you will like my work!",
@@ -58,14 +58,14 @@ const TEXT = {
     ],
 
     // 右侧卡片
-    aboutMeTitle: "Who I am now",
-    aboutMeText: [
+    autobiographyMeTitle: "Who I am now",
+    autobiographyMeText: [
         "> A cybersecurity student with growing hands-on experience.",
         "> Someone who knows how to fall — and how to stand up again.",
         "> Know how to breaking limits, repairing self.",
         "> A person choosing growth, every single day.",
     ],
-    aboutPills: [
+    autobiographyPills: [
         "Cybersecurity",
         "Behavioural security",
         "Network defence",
@@ -73,6 +73,6 @@ const TEXT = {
         "Django",
         "Kali & OPNsense"
     ],
-    aboutFooterLeft: "Open to learning, internships, and new challenges.",
-    aboutFooterContactText: "Email me"
+    autobiographyFooterLeft: "Open to learning, internships, and new challenges.",
+    autobiographyFooterContactText: "Email me"
 };

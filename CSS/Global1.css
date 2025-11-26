@@ -1,3 +1,4 @@
+/* Global layout for secondary pages (Autobiography / About / Blog) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -56,6 +57,34 @@ a {
     font-size: 0.9rem;
 }
 
+/* Language toggle */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: rgba(15, 23, 42, 0.85);
+    color: #e5e7eb;
+    font-size: 0.7rem;
+    cursor: pointer;
+    outline: none;
+}
+.lang-toggle:hover {
+    background: rgba(15, 23, 42, 1);
+}
+.lang-toggle .lang-option {
+    opacity: 0.6;
+}
+.lang-toggle .lang-option.active {
+    opacity: 1;
+    font-weight: 600;
+}
+.lang-toggle .lang-separator {
+    opacity: 0.4;
+}
+
 /* Menu */
 .menu-toggle {
     border: none;
@@ -97,25 +126,25 @@ main {
     color: #9ca3af;
     margin-bottom: 0.75rem;
 }
-.about-title {
+.page-title {
     font-size: clamp(1.8rem, 4vw, 2.6rem);
     font-weight: 700;
     color: #000000;
     margin-bottom: 0.75rem;
 }
-.about-tagline {
+.page-tagline {
     font-size: 1rem;
     color: #9ca3af;
     margin-bottom: 1.5rem;
     max-width: 650px;
 }
-.about-body {
+.page-body {
     font-size: 0.98rem;
     line-height: 1.7;
     color: #000000;
     max-width: 720px;
 }
-.about-body p + p {
+.page-body p + p {
     margin-top: 0.9rem;
 }
 .about-grid {

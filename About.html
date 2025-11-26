@@ -1,99 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>About – Oscar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="CSS/About.css" />
+  <meta charset="UTF-8" />
+  <title>About – Oscar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="CSS/Global1.css" />
 
+  <style>
+    .page-title {
+      margin-bottom: 0.75rem;
+    }
+
+    .page-tagline {
+      margin-bottom: 2.5rem;
+    }
+
+    .about-placeholder-card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 1.25rem;
+      padding: 2rem 2.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-placeholder-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .about-placeholder-text {
+      font-size: 0.96rem;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+  </style>
 </head>
-
 <body>
-<div class="page" id="about">
+  <div class="page" id="about">
     <header class="hero-header">
-        <a href="HomePage.html#home" class="logo" data-text="brand-name">OSCAR</a>
+      <a href="HomePage.html#home" class="logo">OSCAR</a>
 
-        <div class="right-controls">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331"
-                   aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <span>·</span>
-                <a href="https://www.instagram.com/oscarjiang092/"
-                   aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <span>·</span>
-                <a href="https://github.com/JiajunJiang-Oscar"
-                   aria-label="Github" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-
-            <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-                <span class="menu-bar bar-top"></span>
-                <span class="menu-bar bar-middle"></span>
-                <span class="menu-bar bar-bottom"></span>
-            </button>
+      <div class="right-controls">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <span>·</span>
+          <a href="https://www.instagram.com/oscarjiang092/" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <span>·</span>
+          <a href="https://github.com/JiajunJiang-Oscar" aria-label="Github">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
+
+        <button class="lang-toggle" type="button" aria-label="Switch language">
+          <span class="lang-option active">EN</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option">CN</span>
+        </button>
+
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span class="menu-bar bar-top"></span>
+          <span class="menu-bar bar-middle"></span>
+          <span class="menu-bar bar-bottom"></span>
+        </button>
+      </div>
     </header>
 
-    <!-- Body -->
     <main>
-        <div class="section-label" data-text="about-section-label">ABOUT</div>
-        <h1 class="about-title" data-text="about-heading">
-            About me
-        </h1>
-        <p class="about-tagline" data-text="about-tagline">
-            Cybersecurity & Software Engineering student based in Singapore.
+      <div class="section-label">ABOUT</div>
+      <h1 class="page-title">About</h1>
+      <p class="page-tagline">
+        This space is reserved for a future About page.
+      </p>
+
+      <div class="about-placeholder-card">
+        <div class="about-placeholder-title">Coming soon</div>
+        <p class="about-placeholder-text">
+          I’m still designing what I want this About page to be.
+          <br><br>
+          For now, you can read my story on the Autobiography page or check my work on GitHub and LinkedIn.
         </p>
-
-        <div class="about-grid">
-
-            <section>
-                <div class="about-body" id="about-body"></div>
-            </section>
-
-            <div class="right-stack">
-
-                <!-- Box1  -->
-                <aside class="card profile-card">
-                    <img src="Assets/Image/Profile.jpg" alt="Oscar" class="profile-image">
-                </aside>
-
-                <!-- Box2 -->
-                <aside class="card">
-                    <div class="card-title" id="about-focus-title"></div>
-                    <ul class="card-list" id="about-focus-list"></ul>
-                    <div class="pill-row" id="about-pill-row"></div>
-                </aside>
-            </div>
-        </div>
+      </div>
     </main>
 
     <footer>
-        <span data-text="about-footer-left">Open to learning, internships, and new challenges.</span>
-        <span>
-            <a href="mailto:your@email.com" data-text="about-footer-contact">Email me</a>
-        </span>
+      <span>Open to learning, internships, and new challenges.</span>
+      <span>
+        <a href="mailto:your@email.com">Email me</a>
+      </span>
     </footer>
-</div>
+  </div>
 
-<!-- 右侧弹出导航（和首页结构统一） -->
-<nav class="nav-overlay" aria-hidden="true">
+  <nav class="nav-overlay" aria-hidden="true">
     <button class="nav-close" aria-label="Close navigation">×</button>
     <div class="nav-menu">
-        <a href="HomePage.html#home" data-text="nav-home">Home</a>
-        <a href="About.html#about" data-text="nav-about">About</a>
-        <a href="Blog.html#blog" data-text="nav-blog">Blog</a>
+      <a href="HomePage.html#home">Home</a>
+      <a href="About.html#about">About</a>
+      <a href="Blog.html#blog">Blog</a>
     </div>
-</nav>
+  </nav>
 
-  <!-- 内容配置 -->
-  <script src="Content.js"></script>
   <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".page")?.classList.add("fade-in");
+    });
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navOverlay = document.querySelector('.nav-overlay');
     const navClose   = document.querySelector('.nav-close');
@@ -125,83 +143,9 @@
     if (navClose) {
       navClose.addEventListener('click', closeMenu);
     }
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    const logoEl = document.querySelector('[data-text="brand-name"]');
-    if (logoEl && TEXT.logoText) {
-      logoEl.textContent = TEXT.logoText;
-    }
-
-    const aboutLabelEl   = document.querySelector('[data-text="about-section-label"]');
-    const aboutHeadingEl = document.querySelector('[data-text="about-heading"]');
-    const aboutTaglineEl = document.querySelector('[data-text="about-tagline"]');
-
-    if (aboutLabelEl && TEXT.aboutSectionLabel) aboutLabelEl.textContent = TEXT.aboutSectionLabel;
-    if (aboutHeadingEl && TEXT.aboutHeading)    aboutHeadingEl.textContent = TEXT.aboutHeading;
-    if (aboutTaglineEl && TEXT.aboutTagline)    aboutTaglineEl.textContent = TEXT.aboutTagline;
-
-    const aboutBodyEl = document.getElementById('about-body');
-    if (aboutBodyEl && Array.isArray(TEXT.aboutParagraphs)) {
-      aboutBodyEl.innerHTML = TEXT.aboutParagraphs
-        .map(p => `<p>${p}</p>`)
-        .join('');
-    }
-
-    // Right boxes text
-    const focusTitleEl = document.getElementById('about-focus-title');
-    if (focusTitleEl && TEXT.aboutMeTitle) {
-      focusTitleEl.textContent = TEXT.aboutMeTitle;
-    }
-
-    const focusListEl = document.getElementById('about-focus-list');
-    if (focusListEl && Array.isArray(TEXT.aboutMeText)) {
-      focusListEl.innerHTML = TEXT.aboutMeText
-        .map(item => `<li>${item}</li>`)
-        .join('');
-    }
-
-    const pillRowEl = document.getElementById('about-pill-row');
-    if (pillRowEl && Array.isArray(TEXT.aboutPills)) {
-      pillRowEl.innerHTML = TEXT.aboutPills
-        .map(pill => `<span class="pill">${pill}</span>`)
-        .join('');
-    }
-
-    const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
-    const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
-
-    if (footerLeftEl && TEXT.aboutFooterLeft) {
-      footerLeftEl.textContent = TEXT.aboutFooterLeft;
-    }
-    if (footerContactEl && TEXT.aboutFooterContactText) {
-      footerContactEl.textContent = TEXT.aboutFooterContactText;
-    }
-
-    const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
-    const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
-    const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');
-
-    navHomeEls.forEach(el  => TEXT.navHome  && (el.textContent  = TEXT.navHome));
-    navAboutEls.forEach(el => TEXT.navAbout && (el.textContent = TEXT.navAbout));
-    navBlogEls.forEach(el  => TEXT.navBlog  && (el.textContent  = TEXT.navBlog));
-
-    // 页面 title
-    if (TEXT.aboutPageTitle) {
-      document.title = TEXT.aboutPageTitle;
-    }
-
-    // 页面载入时，让 .page 淡入
-    document.addEventListener('DOMContentLoaded', () => {
-        const pageEl = document.querySelector('.page');
-        if (pageEl) {
-            requestAnimationFrame(() => {
-                pageEl.classList.add('fade-in');
-            });
-        }
-    });
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
   </script>
 </body>
 </html>
+
+

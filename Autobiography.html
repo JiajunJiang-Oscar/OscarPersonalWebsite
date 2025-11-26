@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Autobiography – Oscar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="CSS/Global1.css" />
+
+</head>
+
+<body>
+<div class="page" id="autobiography">
+    <header class="hero-header">
+        <a href="HomePage.html#home" class="logo" data-text="brand-name">OSCAR</a>
+
+        <div class="right-controls">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331"
+                   aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <span>·</span>
+                <a href="https://www.instagram.com/oscarjiang092/"
+                   aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <span>·</span>
+                <a href="https://github.com/JiajunJiang-Oscar"
+                   aria-label="Github" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <button class="lang-toggle" type="button" aria-label="Switch language">
+                <span class="lang-option active">EN</span>
+                <span class="lang-separator">/</span>
+                <span class="lang-option">CN</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="menu-bar bar-top"></span>
+                <span class="menu-bar bar-middle"></span>
+                <span class="menu-bar bar-bottom"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <main>
+        <div class="section-label" data-text="autobiography-section-label">AUTOBIOGRAPHY</div>
+        <h1 class="page-title" data-text="autobiography-heading">
+            My Autobiography
+        </h1>
+        <p class="page-tagline" data-text="autobiography-tagline">
+            Cybersecurity & Software Engineering student based in Singapore.
+        </p>
+
+        <div class="about-grid">
+
+            <section>
+                <div class="page-body" id="autobiography-body"></div>
+            </section>
+
+            <div class="right-stack">
+
+                <!-- Box1  -->
+                <aside class="card profile-card">
+                    <img src="Assets/Image/Profile.jpg" alt="Oscar" class="profile-image">
+                </aside>
+
+                <!-- Box2 -->
+                <aside class="card">
+                    <div class="card-title" id="autobiography-focus-title"></div>
+                    <ul class="card-list" id="autobiography-focus-list"></ul>
+                    <div class="pill-row" id="autobiography-pill-row"></div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span data-text="autobiography-footer-left">Open to learning, internships, and new challenges.</span>
+        <span>
+            <a href="mailto:your@email.com" data-text="autobiography-footer-contact">Email me</a>
+        </span>
+    </footer>
+</div>
+
+<!-- 右侧弹出导航（和首页结构统一） -->
+<nav class="nav-overlay" aria-hidden="true">
+    <button class="nav-close" aria-label="Close navigation">×</button>
+    <div class="nav-menu">
+        <a href="HomePage.html#home" data-text="nav-home">Home</a>
+        <a href="About.html#about" data-text="nav-about">About</a>
+        <a href="Blog.html#blog" data-text="nav-blog">Blog</a>
+    </div>
+</nav>
+
+  <!-- 内容配置 -->
+  <script src="Content.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const navClose   = document.querySelector('.nav-close');
+    const navLinks   = document.querySelectorAll('.nav-menu a');
+
+    function openMenu() {
+      if (!menuToggle || !navOverlay) return;
+      menuToggle.classList.add('open');
+      navOverlay.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      navOverlay.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeMenu() {
+      if (!menuToggle || !navOverlay) return;
+      menuToggle.classList.remove('open');
+      navOverlay.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      navOverlay.setAttribute('aria-hidden', 'true');
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.contains('open');
+        isOpen ? closeMenu() : openMenu();
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener('click', closeMenu);
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    const logoEl = document.querySelector('[data-text="brand-name"]');
+    if (logoEl && TEXT.logoText) {
+      logoEl.textContent = TEXT.logoText;
+    }
+
+    const autobiographyLabelEl   = document.querySelector('[data-text="autobiography-section-label"]');
+    const autobiographyHeadingEl = document.querySelector('[data-text="autobiography-heading"]');
+    const autobiographyTaglineEl = document.querySelector('[data-text="autobiography-tagline"]');
+
+    if (autobiographyLabelEl && TEXT.autobiographySectionLabel) autobiographyLabelEl.textContent = TEXT.autobiographySectionLabel;
+    if (autobiographyHeadingEl && TEXT.autobiographyHeading)    autobiographyHeadingEl.textContent = TEXT.autobiographyHeading;
+    if (autobiographyTaglineEl && TEXT.autobiographyTagline)    autobiographyTaglineEl.textContent = TEXT.autobiographyTagline;
+
+    const autobiographyBodyEl = document.getElementById('autobiography-body');
+    if (autobiographyBodyEl && Array.isArray(TEXT.autobiographyParagraphs)) {
+      autobiographyBodyEl.innerHTML = TEXT.autobiographyParagraphs
+        .map(p => `<p>${p}</p>`)
+        .join('');
+    }
+
+    // Right boxes text
+    const focusTitleEl = document.getElementById('autobiography-focus-title');
+    if (focusTitleEl && TEXT.autobiographyMeTitle) {
+      focusTitleEl.textContent = TEXT.autobiographyMeTitle;
+    }
+
+    const focusListEl = document.getElementById('autobiography-focus-list');
+    if (focusListEl && Array.isArray(TEXT.autobiographyMeText)) {
+      focusListEl.innerHTML = TEXT.autobiographyMeText
+        .map(item => `<li>${item}</li>`)
+        .join('');
+    }
+
+    const pillRowEl = document.getElementById('autobiography-pill-row');
+    if (pillRowEl && Array.isArray(TEXT.autobiographyPills)) {
+      pillRowEl.innerHTML = TEXT.autobiographyPills
+        .map(pill => `<span class="pill">${pill}</span>`)
+        .join('');
+    }
+
+    const footerLeftEl    = document.querySelector('[data-text="autobiography-footer-left"]');
+    const footerContactEl = document.querySelector('[data-text="autobiography-footer-contact"]');
+
+    if (footerLeftEl && TEXT.autobiographyFooterLeft) {
+      footerLeftEl.textContent = TEXT.autobiographyFooterLeft;
+    }
+    if (footerContactEl && TEXT.autobiographyFooterContactText) {
+      footerContactEl.textContent = TEXT.autobiographyFooterContactText;
+    }
+
+    const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
+    const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
+    const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');
+
+    navHomeEls.forEach(el  => TEXT.navHome  && (el.textContent  = TEXT.navHome));
+    navAboutEls.forEach(el => TEXT.navAbout && (el.textContent = TEXT.navAbout));
+    navBlogEls.forEach(el  => TEXT.navBlog  && (el.textContent  = TEXT.navBlog));
+
+    // 页面 title
+    if (TEXT.autobiographyPageTitle) {
+      document.title = TEXT.autobiographyPageTitle;
+    }
+
+    // 页面载入时，让 .page 淡入
+    document.addEventListener('DOMContentLoaded', () => {
+        const pageEl = document.querySelector('.page');
+        if (pageEl) {
+            requestAnimationFrame(() => {
+                pageEl.classList.add('fade-in');
+            });
+        }
+    });
+  </script>
+</body>
+</html>
