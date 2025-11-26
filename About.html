@@ -52,22 +52,20 @@
 
         <div class="about-grid">
 
-            <!-- 左侧简介 -->
             <section>
                 <div class="about-body" id="about-body"></div>
             </section>
 
-            <!-- ➤ 新增右侧垂直卡片区 -->
             <div class="right-stack">
 
-                <!-- 卡片 1: 头像 box -->
+                <!-- Box1  -->
                 <aside class="card profile-card">
-                    <div class="photo-box">Oscar</div>   <!-- 后续换成 img -->
+                    <img src="Assets/Image/Profile.jpg" alt="Oscar" class="profile-image">
                 </aside>
 
-                <!-- 卡片 2: What I focus on -->
+                <!-- Box2 -->
                 <aside class="card">
-                    <div class="card-title">What I focus on</div>
+                    <div class="card-title" id="about-focus-title"></div>
                     <ul class="card-list" id="about-focus-list"></ul>
                     <div class="pill-row" id="about-pill-row"></div>
                 </aside>
@@ -89,14 +87,13 @@
     <div class="nav-menu">
         <a href="HomePage.html#home" data-text="nav-home">Home</a>
         <a href="About.html#about" data-text="nav-about">About</a>
-        <a href="#" data-text="nav-blog">Blog</a>
+        <a href="Blog.html#blog" data-text="nav-blog">Blog</a>
     </div>
 </nav>
 
   <!-- 内容配置 -->
   <script src="Content.js"></script>
   <script>
-    /* ===== 顶部菜单逻辑：与首页完全一致 ===== */
     const menuToggle = document.querySelector('.menu-toggle');
     const navOverlay = document.querySelector('.nav-overlay');
     const navClose   = document.querySelector('.nav-close');
@@ -153,15 +150,15 @@
         .join('');
     }
 
-    // 右侧卡片：标题 + 列表 + 小标签
-    const focusTitleEl = document.querySelector('[data-text="about-focus-title"]');
-    if (focusTitleEl && TEXT.aboutFocusTitle) {
-      focusTitleEl.textContent = TEXT.aboutFocusTitle;
+    // Right boxes text
+    const focusTitleEl = document.getElementById('about-focus-title');
+    if (focusTitleEl && TEXT.aboutMeTitle) {
+      focusTitleEl.textContent = TEXT.aboutMeTitle;
     }
 
     const focusListEl = document.getElementById('about-focus-list');
-    if (focusListEl && Array.isArray(TEXT.aboutFocusItems)) {
-      focusListEl.innerHTML = TEXT.aboutFocusItems
+    if (focusListEl && Array.isArray(TEXT.aboutMeText)) {
+      focusListEl.innerHTML = TEXT.aboutMeText
         .map(item => `<li>${item}</li>`)
         .join('');
     }
@@ -173,7 +170,6 @@
         .join('');
     }
 
-    // 底部文字
     const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
     const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
 
@@ -184,7 +180,6 @@
       footerContactEl.textContent = TEXT.aboutFooterContactText;
     }
 
-    // 导航文字（复用首页 TEXT 里的 nav 字段）
     const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
     const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
     const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');

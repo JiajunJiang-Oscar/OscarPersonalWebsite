@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-/* 顶部条 */
+/* Top Bar */
 .page {
     min-height: 100vh;
     display: flex;
@@ -56,7 +56,7 @@ a {
     font-size: 0.9rem;
 }
 
-/* 汉堡菜单 */
+/* Menu */
 .menu-toggle {
     border: none;
     background: transparent;
@@ -84,7 +84,6 @@ a {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* 主体内容 */
 main {
     flex: 1;
     padding: 2rem 1.5rem 3rem;
@@ -154,9 +153,9 @@ main {
 }
 
 .profile-image {
-    width: 300px;            /* 你可以调成 120~200px */
+    width: 300px;
     height: 200px;
-    border-radius: 12px;     /* 圆角，如果你想圆形就改成50% */
+    border-radius: 12px;
     object-fit: cover;
     border: 2px solid rgba(255,255,255,0.5);
 }
@@ -193,7 +192,6 @@ footer a:hover {
     color: #e5e7eb;
 }
 
-/* 右侧弹出菜单 */
 .nav-overlay {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);

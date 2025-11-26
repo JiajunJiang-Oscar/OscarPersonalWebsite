@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog – Oscar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      color: #e5e7eb;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* 顶部条 */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transition: opacity 1.3s ease;
+    }
+    .page.fade-in {
+      opacity: 1;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+    }
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 1.2rem;
+      background: #000;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      text-transform: uppercase;
+    }
+    .logo:hover {
+      opacity: 0.8;
+    }
+    .right-controls {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    .social-links a {
+      font-size: 0.9rem;
+    }
+
+    /* 汉堡菜单 */
+    .menu-toggle {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      width: 28px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-bar {
+      height: 2px;
+      width: 100%;
+      background: #9ca3af;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .menu-toggle.open .bar-top {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.open .bar-middle {
+      opacity: 0;
+    }
+    .menu-toggle.open .bar-bottom {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* 主体内容 */
+    main {
+      flex: 1;
+      padding: 2rem 1.5rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 0.75rem;
+    }
+    .blog-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 0.75rem;
+    }
+    .blog-tagline {
+      font-size: 1rem;
+      color: #9ca3af;
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+    }
+
+    /* 居中 “Upcoming” 卡片 */
+    .blog-upcoming-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blog-upcoming-card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 1.25rem;
+      padding: 2rem 2.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .blog-upcoming-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-upcoming-text {
+      font-size: 0.96rem;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    footer {
+      padding: 1.5rem 1.5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    footer a {
+      color: #9ca3af;
+    }
+    footer a:hover {
+      color: #e5e7eb;
+    }
+
+    /* 右侧弹出菜单 */
+    .nav-overlay {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.7);
+
+      position: fixed;
+      inset: 0;
+      color: #000000;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 2rem 3rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 20;
+    }
+    .nav-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2.5rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      line-height: 1;
+    }
+    .nav-menu {
+      margin-top: 3.5rem;
+      text-align: right;
+    }
+    .nav-menu a {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+    }
+    .nav-menu a:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .hero-header {
+        padding: 1rem 1.25rem;
+      }
+      main {
+        padding-inline: 1.25rem;
+      }
+      .nav-overlay {
+        padding: 2rem 1.5rem;
+      }
+      .nav-close {
+        right: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="blog">
+    <header class="hero-header">
+      <a href="HomePage.html#home" class="logo">OSCAR</a>
+
+      <div class="right-controls">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <span>·</span>
+          <a href="https://www.instagram.com/oscarjiang092/" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <span>·</span>
+          <a href="https://github.com/JiajunJiang-Oscar" aria-label="Github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span class="menu-bar bar-top"></span>
+          <span class="menu-bar bar-middle"></span>
+          <span class="menu-bar bar-bottom"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <main>
+      <div class="section-label">BLOG</div>
+      <h1 class="blog-title">Blog</h1>
+      <p class="blog-tagline">
+        Notes, experiments, and reflections on security and software – coming soon.
+      </p>
+
+      <div class="blog-upcoming-wrapper">
+        <div class="blog-upcoming-card">
+          <div class="blog-upcoming-title">Upcoming</div>
+          <p class="blog-upcoming-text">
+            I’m still setting up this space. In the future, this is where I’ll share write-ups on labs, small tools I build, and things I learn along the way.
+            <br><br>
+            For now, you can check my projects on GitHub or connect with me on LinkedIn.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>Open to learning, internships, and new challenges.</span>
+      <span>
+        <a href="mailto:your@email.com">Email me</a>
+      </span>
+    </footer>
+  </div>
+
+  <!-- 右侧弹出导航 -->
+  <nav class="nav-overlay" aria-hidden="true">
+    <button class="nav-close" aria-label="Close navigation">×</button>
+    <div class="nav-menu">
+      <a href="HomePage.html#home">Home</a>
+      <a href="About.html#about">About</a>
+      <a href="Blog.html#blog">Blog</a>
+    </div>
+  </nav>
+
+  <script>
+    // 页面淡入
+    window.addEventListener("load", () => {
+      document.querySelector(".page")?.classList.add("fade-in");
+    });
+
+    // 菜单逻辑（和 About 一样）
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const navClose   = document.querySelector('.nav-close');
+    const navLinks   = document.querySelectorAll('.nav-menu a');
+
+    function openMenu() {
+      menuToggle.classList.add('open');
+      navOverlay.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      navOverlay.setAttribute('aria-hidden', 'false');
+    }
+    function closeMenu() {
+      menuToggle.classList.remove('open');
+      navOverlay.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      navOverlay.setAttribute('aria-hidden', 'true');
+    }
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.contains('open');
+        isOpen ? closeMenu() : openMenu();
+      });
+    }
+    navClose?.addEventListener('click', closeMenu);
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+</body>
+</html>
