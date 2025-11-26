@@ -20,7 +20,15 @@ a {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* 淡入关键：初始看不见 */
+    opacity: 0;
+    transition: opacity 1.5s ease;  /* 时间可以改成 1.0 / 1.5 看你喜欢 */
 }
+/* 加上这个类之后就会变成不透明 */
+.page.fade-in {
+    opacity: 1;
+}
+
 .hero-header {
     display: flex;
     align-items: center;

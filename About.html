@@ -193,6 +193,16 @@
     if (TEXT.aboutPageTitle) {
       document.title = TEXT.aboutPageTitle;
     }
+
+    // 页面载入时，让 .page 淡入
+    document.addEventListener('DOMContentLoaded', () => {
+        const pageEl = document.querySelector('.page');
+        if (pageEl) {
+            requestAnimationFrame(() => {
+                pageEl.classList.add('fade-in');
+            });
+        }
+    });
   </script>
 </body>
 </html>
