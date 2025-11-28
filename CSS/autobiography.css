@@ -1,0 +1,113 @@
+/* ===== Autobiography page specific styles ===== */
+
+/* 主区布局 */
+main {
+    flex: 1;
+    padding: 2rem 1.5rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 小标签 / 标题 / 副标题（只给自传页用的话就放这里） */
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+}
+.page-title,
+.about-title { /* 兼容你之前的命名 */
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+.page-tagline,
+.about-tagline {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+    max-width: 650px;
+}
+.page-body,
+.about-body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #000000;
+    max-width: 720px;
+}
+.page-body p + p,
+.about-body p + p {
+    margin-top: 0.9rem;
+}
+
+/* 左右两列布局（如果只有自传页用，可以留在这里） */
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr);
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+/* 深色内容卡片 */
+.card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.7rem;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+.card-list {
+    list-style: none;
+    font-size: 0.93rem;
+    color: #d1d5db;
+}
+.card-list li + li {
+    margin-top: 0.5rem;
+}
+
+/* 头像卡片（自传页右侧） */
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem 1.2rem;
+    margin-bottom: 2rem;
+}
+.profile-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+/* pill 标签（如果未来别的页也想用，可以再抽到 global） */
+.pill-row {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.pill {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid #4b5563;
+    color: #9ca3af;
+}
+
+/* 自传页自己的响应式 */
+@media (max-width: 768px) {
+    main {
+        padding-inline: 1.25rem;
+    }
+    .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

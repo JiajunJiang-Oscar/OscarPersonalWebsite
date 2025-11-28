@@ -5,67 +5,54 @@
   <title>About – Oscar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-  <link rel="stylesheet" href="CSS/Global1.css" />
+  <<link rel="stylesheet" href="CSS/global_1.css" />
+  <link rel="stylesheet" href="CSS/about.css" />
 
-  <style>
-    .page-title {
-      margin-bottom: 0.75rem;
-    }
-
-    .page-tagline {
-      margin-bottom: 2.5rem;
-    }
-
-    .about-placeholder-card {
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: 1.25rem;
-      padding: 2rem 2.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .about-placeholder-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    .about-placeholder-text {
-      font-size: 0.96rem;
-      color: #d1d5db;
-      line-height: 1.6;
-    }
-
-  </style>
 </head>
 <body>
   <div class="page" id="about">
+    <!-- 顶部导航条 -->
     <header class="hero-header">
-      <a href="index.html#home" class="logo">OSCAR</a>
+      <!-- 左侧 LOGO：返回首页 -->
+      <a href="index.html#home" class="logo" data-text="brand-name">OSCAR</a>
 
+      <!-- 右侧：社交链接 + 菜单 -->
       <div class="right-controls">
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/jiajun-jiang-b44397331"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <span>·</span>
-          <a href="https://www.instagram.com/oscarjiang092/" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/oscarjiang092/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-instagram"></i>
           </a>
           <span>·</span>
-          <a href="https://github.com/JiajunJiang-Oscar" aria-label="Github">
+          <a
+            href="https://github.com/JiajunJiang-Oscar"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
 
-        <button class="lang-toggle" type="button" aria-label="Switch language">
-          <span class="lang-option active">EN</span>
-          <span class="lang-separator">/</span>
-          <span class="lang-option">CN</span>
-        </button>
-
-        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+        <!-- 汉堡菜单 -->
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
           <span class="menu-bar bar-top"></span>
           <span class="menu-bar bar-middle"></span>
           <span class="menu-bar bar-bottom"></span>
@@ -73,52 +60,113 @@
       </div>
     </header>
 
+    <!-- 主体内容 -->
     <main>
-      <div class="section-label">ABOUT</div>
-      <h1 class="page-title">About</h1>
-      <p class="page-tagline">
-        This space is reserved for a future About page.
+      <!-- 顶部小标签 + 大标题 + tagline -->
+      <div class="section-label" data-text="about-section-label">ABOUT</div>
+      <h1 class="about-title" data-text="about-heading">About me</h1>
+      <p class="about-tagline" data-text="about-tagline">
+        Cybersecurity & Software Engineering student based in Singapore.
       </p>
 
-      <div class="about-placeholder-card">
-        <div class="about-placeholder-title">Coming soon</div>
-        <p class="about-placeholder-text">
-          I’m still designing what I want this About page to be.
-          <br><br>
-          For now, you can read my story on the Autobiography page or check my work on GitHub and LinkedIn.
-        </p>
-      </div>
+      <!-- 纵向卡片栈 -->
+      <section class="stack-v">
+        <!-- 卡片 1：蓝色姓名卡 -->
+        <div class="card-primary">
+          <div>
+            <div
+              class="card-title"
+              data-text="about-header-name"
+            >Jiajun Jiang (Oscar)</div>
+            <div
+              class="card-text"
+              data-text="about-header-role"
+            >Cybersecurity student</div>
+          </div>
+
+          <!-- 右侧照片占位：以后可以换成 <img> -->
+          <div class="photo-box" id="about-photo-box">
+            <span data-text="about-photo-label">Photo</span>
+          </div>
+        </div>
+
+        <!-- Introduction -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-intro-title">Introduction</h2>
+          <div class="card-text intro-body" id="about-intro-body"></div>
+        </article>
+
+        <!-- Education -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-education-title">Education</h2>
+          <ul class="edu-list" id="about-education-list"></ul>
+        </article>
+
+        <!-- Skills -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-skills-title">Skills</h2>
+          <div class="skills-grid" id="about-skills-grid"></div>
+        </article>
+
+        <!-- Projects -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-projects-title">Projects</h2>
+          <ul class="list-styled projects-list" id="about-projects-list"></ul>
+        </article>
+
+        <!-- Experience -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-experience-title">Experience</h2>
+          <ul class="list-styled" id="about-experience-list"></ul>
+        </article>
+
+        <!-- Achievement -->
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="about-achievement-title">Achievement</h2>
+          <ul class="list-styled" id="about-achievement-list"></ul>
+        </article>
+
+        <!-- 如果以后要加 Education / Projects / Certifications，
+             直接复制一个 card-secondary，然后在 Content.js 里加对应 TEXT 字段即可 -->
+      </section>
     </main>
 
+    <!-- 页脚 -->
     <footer>
-      <span>Open to learning, internships, and new challenges.</span>
+      <span data-text="about-footer-left">
+        Open to learning, internships, and new challenges.
+      </span>
       <span>
-        <a href="mailto:your@email.com">Email me</a>
+        <!-- 如果想连邮箱也放在 TEXT 里，可以把 href 也改成从 TEXT 读取 -->
+        <a href="mailto:your@email.com" data-text="about-footer-contact">
+          Email me
+        </a>
       </span>
     </footer>
   </div>
 
+  <!-- 右侧弹出导航 -->
   <nav class="nav-overlay" aria-hidden="true">
     <button class="nav-close" aria-label="Close navigation">×</button>
     <div class="nav-menu">
-      <a href="index.html#home">Home</a>
-      <a href="about.html#about">About</a>
-      <a href="blog.html#blog">Blog</a>
+      <a href="index.html#home" data-text="nav-home">Home</a>
+      <a href="About.html#about" data-text="nav-about">About</a>
+      <a href="Blog.html#blog" data-text="nav-blog">Blog</a>
     </div>
   </nav>
 
-  <script>
-    window.addEventListener("load", () => {
-      document.querySelector(".page")?.classList.add("fade-in");
-    });
+  <!-- 文本内容配置 -->
+  <script src="Content.js"></script>
 
+  <!-- 行为逻辑 & 文案注入 -->
+  <script>
+    // 顶部菜单逻辑
     const menuToggle = document.querySelector('.menu-toggle');
     const navOverlay = document.querySelector('.nav-overlay');
     const navClose   = document.querySelector('.nav-close');
     const navLinks   = document.querySelectorAll('.nav-menu a');
 
     function openMenu() {
-      if (!menuToggle || !navOverlay) return;
       menuToggle.classList.add('open');
       navOverlay.classList.add('open');
       menuToggle.setAttribute('aria-expanded', 'true');
@@ -126,7 +174,6 @@
     }
 
     function closeMenu() {
-      if (!menuToggle || !navOverlay) return;
       menuToggle.classList.remove('open');
       navOverlay.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
@@ -139,13 +186,140 @@
         isOpen ? closeMenu() : openMenu();
       });
     }
-
     if (navClose) {
       navClose.addEventListener('click', closeMenu);
     }
-    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ========= 文案注入（全部来自 Content.js 里的 TEXT） =========
+
+    // 品牌名
+    if (window.TEXT) {
+      const logoEl = document.querySelector('[data-text="brand-name"]');
+      if (logoEl && TEXT.brandName) {
+        logoEl.textContent = TEXT.brandName;
+      }
+
+      // 顶部小标签 / 标题 / tagline
+      const aboutLabelEl   = document.querySelector('[data-text="about-section-label"]');
+      const aboutHeadingEl = document.querySelector('[data-text="about-heading"]');
+      const aboutTaglineEl = document.querySelector('[data-text="about-tagline"]');
+
+      if (aboutLabelEl && TEXT.aboutSectionLabel) aboutLabelEl.textContent = TEXT.aboutSectionLabel;
+      if (aboutHeadingEl && TEXT.aboutHeading)    aboutHeadingEl.textContent = TEXT.aboutHeading;
+      if (aboutTaglineEl && TEXT.aboutTagline)    aboutTaglineEl.textContent = TEXT.aboutTagline;
+
+      // 蓝色姓名卡
+      const headerNameEl  = document.querySelector('[data-text="about-header-name"]');
+      const headerRoleEl  = document.querySelector('[data-text="about-header-role"]');
+      const photoLabelEl  = document.querySelector('[data-text="about-photo-label"]');
+
+      if (headerNameEl && TEXT.aboutHeaderName) headerNameEl.textContent = TEXT.aboutHeaderName;
+      if (headerRoleEl && TEXT.aboutHeaderRole) headerRoleEl.textContent = TEXT.aboutHeaderRole;
+      if (photoLabelEl && TEXT.aboutPhotoLabel) photoLabelEl.textContent = TEXT.aboutPhotoLabel;
+
+      // Introduction
+      const introTitleEl = document.querySelector('[data-text="about-intro-title"]');
+      if (introTitleEl && TEXT.aboutIntroTitle) introTitleEl.textContent = TEXT.aboutIntroTitle;
+
+      const introBodyEl = document.getElementById('about-intro-body');
+      if (introBodyEl && Array.isArray(TEXT.aboutIntroductionParagraphs)) {
+        introBodyEl.innerHTML = TEXT.aboutIntroductionParagraphs
+          .map(p => `<p>${p}</p>`)
+          .join('');
+      }
+
+      // Education
+      const eduTitleEl = document.querySelector('[data-text="about-education-title"]');
+      if (eduTitleEl && TEXT.aboutEducationTitle) eduTitleEl.textContent = TEXT.aboutEducationTitle;
+
+      const eduListEl = document.getElementById('about-education-list');
+      if (eduListEl && Array.isArray(TEXT.aboutEducationList)) {
+        eduListEl.innerHTML = TEXT.aboutEducationList.map(item => `
+          <li class="edu-item">
+            <div class="edu-header">
+              <span>${item.school}</span>
+              <span>${item.period}</span>
+            </div>
+            <p class="edu-details">${item.details}</p>
+          </li>
+        `).join('');
+      }
+
+      // Skills
+      const skillsTitleEl = document.querySelector('[data-text="about-skills-title"]');
+      if (skillsTitleEl && TEXT.aboutSkillsTitle) skillsTitleEl.textContent = TEXT.aboutSkillsTitle;
+
+      const skillsGridEl = document.getElementById('about-skills-grid');
+      if (skillsGridEl && Array.isArray(TEXT.aboutSkillsList)) {
+        skillsGridEl.innerHTML = TEXT.aboutSkillsList
+          .map(skill => `<span class="chip">${skill}</span>`)
+          .join('');
+      }
+
+      // Projects
+      const projectsTitleEl = document.querySelector('[data-text="about-projects-title"]');
+      if (projectsTitleEl && TEXT.aboutProjectsTitle) projectsTitleEl.textContent = TEXT.aboutProjectsTitle;
+
+      const projectsListEl = document.getElementById('about-projects-list');
+      if (projectsListEl && Array.isArray(TEXT.aboutProjectsList)) {
+        projectsListEl.innerHTML = TEXT.aboutProjectsList
+          .map(project => `<li><span>${project.name}</span> — ${project.description}</li>`)
+          .join('');
+      }
+
+      // Experience
+      const experienceTitleEl = document.querySelector('[data-text="about-experience-title"]');
+      if (experienceTitleEl && TEXT.aboutExperienceTitle) experienceTitleEl.textContent = TEXT.aboutExperienceTitle;
+
+      const experienceListEl = document.getElementById('about-experience-list');
+      if (experienceListEl && Array.isArray(TEXT.aboutExperienceList)) {
+        experienceListEl.innerHTML = TEXT.aboutExperienceList
+          .map(item => `<li>${item}</li>`)
+          .join('');
+      }
+
+      // Achievement
+      const achievementTitleEl = document.querySelector('[data-text="about-achievement-title"]');
+      if (achievementTitleEl && TEXT.aboutAchievementTitle) achievementTitleEl.textContent = TEXT.aboutAchievementTitle;
+
+      const achievementListEl = document.getElementById('about-achievement-list');
+      if (achievementListEl && Array.isArray(TEXT.aboutAchievementList)) {
+        achievementListEl.innerHTML = TEXT.aboutAchievementList
+          .map(item => `<li>${item}</li>`)
+          .join('');
+      }
+
+      // 页脚文案
+      const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
+      const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
+
+      if (footerLeftEl && TEXT.aboutFooterLeft) {
+        footerLeftEl.textContent = TEXT.aboutFooterLeft;
+      }
+      if (footerContactEl && TEXT.aboutFooterContactText) {
+        footerContactEl.textContent = TEXT.aboutFooterContactText;
+      }
+
+      // 顶部导航文字
+      const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
+      const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
+      const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');
+
+      navHomeEls.forEach(el  => TEXT.navHome  && (el.textContent  = TEXT.navHome));
+      navAboutEls.forEach(el => TEXT.navAbout && (el.textContent = TEXT.navAbout));
+      navBlogEls.forEach(el  => TEXT.navBlog  && (el.textContent  = TEXT.navBlog));
+    }
+
+    // 页面载入时让内容淡入
+    document.addEventListener('DOMContentLoaded', () => {
+      const pageEl = document.getElementById('about');
+      if (pageEl) {
+        requestAnimationFrame(() => pageEl.classList.add('fade-in'));
+      }
+    });
   </script>
 </body>
 </html>
-
-

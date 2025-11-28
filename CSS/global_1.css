@@ -1,4 +1,6 @@
-/* Global layout for secondary pages (Autobiography / About / Blog) */
+/* ===== Global common styles: reset, layout, header, nav, footer ===== */
+
+/* Reset & base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-/* Top Bar */
+/* Page wrapper (二级页通用容器，可以给所有非首页用) */
 .page {
     min-height: 100vh;
     display: flex;
@@ -28,6 +30,7 @@ a {
     opacity: 1;
 }
 
+/* ===== Top bar ===== */
 .hero-header {
     display: flex;
     align-items: center;
@@ -57,7 +60,7 @@ a {
     font-size: 0.9rem;
 }
 
-/* Language toggle */
+/* Language toggle（如果暂时不用也可以保留，将来多语言方便复用） */
 .lang-toggle {
     display: inline-flex;
     align-items: center;
@@ -85,7 +88,7 @@ a {
     opacity: 0.4;
 }
 
-/* Menu */
+/* ===== Hamburger menu button ===== */
 .menu-toggle {
     border: none;
     background: transparent;
@@ -113,114 +116,7 @@ a {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-main {
-    flex: 1;
-    padding: 2rem 1.5rem 3rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.section-label {
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.8rem;
-    color: #9ca3af;
-    margin-bottom: 0.75rem;
-}
-.page-title {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 0.75rem;
-}
-.page-tagline {
-    font-size: 1rem;
-    color: #9ca3af;
-    margin-bottom: 1.5rem;
-    max-width: 650px;
-}
-.page-body {
-    font-size: 0.98rem;
-    line-height: 1.7;
-    color: #000000;
-    max-width: 720px;
-}
-.page-body p + p {
-    margin-top: 0.9rem;
-}
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.5fr);
-    gap: 2.5rem;
-    margin-top: 2.5rem;
-}
-
-.card {
-    background: rgba(15, 23, 42, 0.9);
-    border-radius: 1.25rem;
-    padding: 1.5rem 1.7rem;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-}
-.card-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-.card-list {
-    list-style: none;
-    font-size: 0.93rem;
-    color: #d1d5db;
-}
-.card-list li + li {
-    margin-top: 0.5rem;
-}
-.profile-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.8rem 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.profile-image {
-    width: 300px;
-    height: 200px;
-    border-radius: 12px;
-    object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.5);
-}
-.pill-row {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-.pill {
-    font-size: 0.75rem;
-    padding: 0.15rem 0.7rem;
-    border-radius: 999px;
-    border: 1px solid #4b5563;
-    color: #9ca3af;
-}
-
-/* 页脚 */
-footer {
-    padding: 1.5rem 1.5rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 0.8rem;
-    color: #6b7280;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-footer a {
-    color: #9ca3af;
-}
-footer a:hover {
-    color: #e5e7eb;
-}
-
+/* ===== Right-side overlay nav ===== */
 .nav-overlay {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -268,15 +164,29 @@ footer a:hover {
     opacity: 0.7;
 }
 
+/* ===== Footer (通用) ===== */
+footer {
+    padding: 1.5rem 1.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: #6b7280;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+footer a {
+    color: #9ca3af;
+}
+footer a:hover {
+    color: #e5e7eb;
+}
+
+/* ===== Responsive (通用) ===== */
 @media (max-width: 768px) {
-     .hero-header {
-         padding: 1rem 1.25rem;
-     }
-    main {
-        padding-inline: 1.25rem;
-    }
-    .about-grid {
-        grid-template-columns: minmax(0, 1fr);
+    .hero-header {
+        padding: 1rem 1.25rem;
     }
     .nav-overlay {
         padding: 2rem 1.5rem;

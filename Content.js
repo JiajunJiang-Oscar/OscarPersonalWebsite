@@ -1,4 +1,5 @@
 const TEXT = {
+    // Home page & Menu text
     heroTitle: ["Move forward", "understand the world", "then help build it."],
     heroSubtitle: "Explore my story →",
 
@@ -13,7 +14,7 @@ const TEXT = {
     autobiographyHeading: "My Autobiography",
     autobiographyTagline: "Cybersecurity student based in Singapore.",
 
-  // 故事段落
+    // Autobiography Page
     autobiographyParagraphs: [
         "My name is Jiang Jiajun. You can call me Oscar. I am a student studying cybersecurity at James Cook " +
         "University. The reason I created this website is to showcase myself in front of everyone and share my story as " +
@@ -57,7 +58,6 @@ const TEXT = {
         "That was the beginning of my second life the first chapter I ever wrote myself."
     ],
 
-    // 右侧卡片
     autobiographyMeTitle: "Who I am now",
     autobiographyMeText: [
         "> A cybersecurity student with growing hands-on experience.",
@@ -74,5 +74,71 @@ const TEXT = {
         "Kali & OPNsense"
     ],
     autobiographyFooterLeft: "Open to learning, internships, and new challenges.",
-    autobiographyFooterContactText: "Email me"
+    autobiographyFooterContactText: "Email me",
+
+    // About Page
+    aboutSectionLabel: "ABOUT",
+    aboutHeading: "About me",
+    aboutTagline: "Cybersecurity & Software Engineering student based in Singapore.",
+
+    aboutHeaderName: "Jiajun Jiang (Oscar)",
+    aboutHeaderRole: "Cybersecurity student",
+    aboutPhotoLabel: "Photo",
+
+    aboutIntroTitle: "Introduction",
+    aboutIntroductionParagraphs: [
+        "My name is Jiajun Jiang, but most people call me Oscar. I study cybersecurity because I want to use what I build to protect the people and systems around me.",
+        "I grew up in Tianjin, a quiet northern city. I was never the top student, and for a long time I thought the future was written for other people.",
+        "Getting the chance to study in Singapore changed everything. It was the first time I could choose for myself—and I chose cybersecurity, even though it meant starting over in a new language and culture."
+    ],
+
+    aboutEducationTitle: "Education",
+    aboutEducationList: [
+        {
+            school: "James Cook University, Singapore",
+            period: "2023 – Present",
+            details: "BSc in Cybersecurity. Coursework in network defence, behavioural security, and secure application design."
+        },
+        {
+            school: "James Cook University, Brisbane (exchange)",
+            period: "2024",
+            details: "Semester abroad focused on digital forensics and cloud security operations."
+        }
+    ],
+
+    aboutSkillsTitle: "Skills",
+    aboutSkillsList: [
+        "Cybersecurity",
+        "Network defence",
+        "Behavioural security",
+        "Swift & iOS",
+        "Django",
+        "Python automation",
+        "Kali & OPNsense",
+        "Technical writing"
+    ],
+
+    aboutProjectsTitle: "Projects",
+    aboutProjectsList: [
+        { name: "ThreatMap", description: "A small dashboard that visualises lab attack traffic and shows mitigation notes." },
+        { name: "Incident Playbook", description: "Markdown-based workflow that helps classmates practise blue-team drills." },
+        { name: "Swift Recon Toolkit", description: "Lightweight iOS app for collecting lab observations on the move." }
+    ],
+
+    aboutExperienceTitle: "Experience",
+    aboutExperienceList: [
+        "Cybersecurity student helper — guide juniors through basic lab tooling and share troubleshooting notes.",
+        "Student project teams — rotated across roles from scripting simple scanners to documenting defence plans.",
+        "Self-driven internships — shadowed SOC workflows and wrote observations for mentors to review."
+    ],
+
+    aboutAchievementTitle: "Achievement",
+    aboutAchievementList: [
+        "Completed a capstone lab with zero critical findings after remediation.",
+        "Published weekly learning notes for 12+ weeks to help peers prepare for assessments.",
+        "Selected to represent my cohort in a university industry-mentor roundtable."
+    ],
+
+    aboutFooterLeft: "Open to learning, internships, and new challenges.",
+    aboutFooterContactText: "Email me"
 };

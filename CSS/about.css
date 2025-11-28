@@ -1,0 +1,141 @@
+/* ===== About page styles (对齐自传页风格) ===== */
+
+/* 主区布局：跟自传页一致 */
+main {
+    flex: 1;
+    padding: 2rem 1.5rem 3rem;
+    max-width:900px;  /* 宽度 = 自传页文字+卡片的总体宽度 */
+    margin: 0 auto;
+}
+
+/* 小标签 / 标题 / 副标题 —— 完全照抄自传页 */
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+}
+.about-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+.about-tagline {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+    max-width: 650px;
+}
+
+/* 正文文字（如果 About 里也有段落内容） */
+.about-body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #000000;
+    max-width: 720px;
+}
+.about-body p + p {
+    margin-top: 0.9rem;
+}
+
+/* ===== 卡片纵向布局：像 lazy column 一样一列往下 ===== */
+
+.stack-v {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;       /* 卡片之间的间距 */
+    margin-top: 2.2rem;
+}
+
+/* 第一张主卡片：颜色 = 自传页深色卡片 */
+.card-primary {
+    background: rgba(15, 23, 42, 0.9);  /* 和 autobiography.css 里的 .card 一样 */
+    color: #ffffff;
+    border-radius: 1.25rem;
+    padding: 2.4rem 2.6rem;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* 头像（如果你在主卡里放图片） */
+.profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}
+
+/* 主卡片里左边文字区域（名字 + 当前身份） */
+.card-primary-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* 二级卡片：浅灰色圆角卡片 */
+.card-secondary {
+    background: #f3f4f6;          /* 浅灰 */
+    color: #111827;               /* 深灰文字 */
+    border-radius: 1.25rem;
+    padding: 1.7rem 1.9rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* 统一标题 & 正文（About 页的卡片） */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* 列表形式的内容（比如 Who I am now 那几个 bullet） */
+.card-text ul {
+    list-style: disc;
+    padding-left: 1.1rem;
+}
+.card-text li + li {
+    margin-top: 0.4rem;
+}
+
+/* skills / tags 用的小圆角 chip */
+.chip-row {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.chip {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+}
+
+/* ===== 自适应：和自传页类似的断点风格 ===== */
+@media (max-width: 768px) {
+    main {
+        padding-inline: 1.25rem;
+    }
+
+    .card-primary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-image {
+        width: 96px;
+        height: 96px;
+    }
+}
