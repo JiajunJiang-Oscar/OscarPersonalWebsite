@@ -104,35 +104,82 @@ const TEXT = {
 
     aboutSkillsTitle: "Skills",
     aboutSkillsList: [
-        "Cybersecurity",
-        "Network defence",
-        "Behavioural security",
-        "Swift & iOS",
-        "Django",
-        "Python automation",
-        "Kali & OPNsense",
-        "Technical writing"
+        "Mandarin Chinese (Native)",
+        "English",
+        "Python (proficient)",
+        "Kotlin",
+        "Swift",
+        "C++",
+        "R",
+        "Kali Linux",
+        "Ubuntu",
+        "Metasploit Framework",
+        "OPNsense",
+        "Wireshark",
+        "Penetration testing",
+        "firewall rule configuration",
+        "network fundamentals",
+        "Command execution payloads (lab environments)",
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Microsoft PowerPoint",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "PyCharm",
+        "Xcode",
+        "Android Studio",
+        "MySQL",
+        "Android, iOS development",
+        "HTML / CSS / JavaScript",
     ],
 
-    aboutProjectsTitle: "Projects",
+    aboutProjectsTitle: "Projects (For more projects, please go to the page My Projects.)",
     aboutProjectsList: [
-        { name: "ThreatMap", description: "A small dashboard that visualises lab attack traffic and shows mitigation notes." },
-        { name: "Incident Playbook", description: "Markdown-based workflow that helps classmates practise blue-team drills." },
-        { name: "Swift Recon Toolkit", description: "Lightweight iOS app for collecting lab observations on the move." }
+        {
+            name: "Stuxnet Malware Analysis (Academic Research)",
+            description: "Analysed Stuxnet’s attack chain, ICS/SCADA manipulation techniques, and self-limiting " +
+                "behaviour; received High Distinction."
+        },
+        {
+            name: "OPNsense Firewall Implementation and Penetration Testing (Project Report)",
+            description: "Designed and deployed a secure network architecture using OPNsense, created multiple custom " +
+                "firewall rules (IP/domain blocking, HTTP/FTP restriction, GUI access control), enabled traffic " +
+                "logging, and verified effectiveness using Nmap, Metasploit, curl and DNS enumeration. Received High " +
+                "Distinction."
+        },
+        {
+            name: "Health Studio – Android Wellness App (Open Source)",
+            description: "Kotlin · Jetpack Compose · Local Storage. Built an Android app for health tracking with " +
+                "clean Compose UI and modular architecture. Implemented persistent local storage to save and " +
+                "retrieve user wellness records. Published as an open-source project with structured documentation."
+        },
+        {
+            name: "Swift Student Challenge – Cybersecurity Card Game (In Progress)",
+            description: "Building an interactive cybersecurity learning game using Swift-UI, achievement systems, " +
+                "and card-based gameplay mechanics."
+        },
     ],
 
     aboutExperienceTitle: "Experience",
     aboutExperienceList: [
-        "Cybersecurity student helper — guide juniors through basic lab tooling and share troubleshooting notes.",
-        "Student project teams — rotated across roles from scripting simple scanners to documenting defence plans.",
-        "Self-driven internships — shadowed SOC workflows and wrote observations for mentors to review."
+        "Cybersecurity Lab Experience - Hands-on practice with Kali Linux, Metasploit, Ubuntu, and OPNsense firewall " +
+        "configurations. Performed vulnerability scanning, reverse TCP payload testing, protocol analysis, and basic " +
+        "penetration testing against controlled lab environments (Kali ↔ Metasploit).\n",
+
+        "Team Lead in Design Thinking - Led a 4-6 members using design thinking, iterative prototyping, and agile " +
+        "workflow. Facilitated brainstorming sessions, delegated tasks, and delivered a functional early-stage " +
+        "prototype within strict time constraints.",
+
+        "Python Software Development - Developed multiple Python applications including data processing scripts," +
+        " console applications, and a GUI-based program. Gained practical experience in modular programming, " +
+        "OOP principles, error handling, and basic visualization."
     ],
 
     aboutAchievementTitle: "Achievement",
     aboutAchievementList: [
-        "Completed a capstone lab with zero critical findings after remediation.",
-        "Published weekly learning notes for 12+ weeks to help peers prepare for assessments.",
-        "Selected to represent my cohort in a university industry-mentor roundtable."
+        "Apple Teacher-Swift Playgrounds Certificate (June 18, 2025)",
+        "Apple Teacher Certificate (June 18, 2025)",
     ],
 
     aboutFooterLeft: "Open to learning, internships, and new challenges.",
