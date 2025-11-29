@@ -1,5 +1,5 @@
 const TEXT = {
-    // Home page & Menu text
+    // Home Page & Menu text
     heroTitle: ["Move forward", "understand the world", "then help build it."],
     heroSubtitle: "Explore my story →",
 
@@ -12,7 +12,8 @@ const TEXT = {
     autobiographyPageTitle: "Autobiography – Oscar",
     autobiographySectionLabel: "AUTOBIOGRAPHY",
     autobiographyHeading: "My Autobiography",
-    autobiographyTagline: "Cybersecurity student based in Singapore.",
+    autobiographyTagline: "The story before I came to Singapore.",
+    // Home Page END
 
     // Autobiography Page
     autobiographyParagraphs: [
@@ -65,44 +66,39 @@ const TEXT = {
         "> Know how to breaking limits, repairing self.",
         "> A person choosing growth, every single day.",
     ],
-    autobiographyPills: [
-        "Cybersecurity",
-        "Behavioural security",
-        "Network defence",
-        "Swift & iOS",
-        "Django",
-        "Kali & OPNsense"
-    ],
     autobiographyFooterLeft: "Open to learning, internships, and new challenges.",
     autobiographyFooterContactText: "Email me",
+    // Autobiography Page END
 
     // About Page
     aboutSectionLabel: "ABOUT",
     aboutHeading: "About me",
-    aboutTagline: "Cybersecurity & Software Engineering student based in Singapore.",
+    aboutTagline: "Cybersecurity student based in Singapore.",
 
     aboutHeaderName: "Jiajun Jiang (Oscar)",
-    aboutHeaderRole: "Cybersecurity student",
-    aboutPhotoLabel: "Photo",
+    aboutHeaderRole: "Security Analyst, Behavioral Cybersecurity, Network Security",
 
     aboutIntroTitle: "Introduction",
     aboutIntroductionParagraphs: [
-        "My name is Jiajun Jiang, but most people call me Oscar. I study cybersecurity because I want to use what I build to protect the people and systems around me.",
-        "I grew up in Tianjin, a quiet northern city. I was never the top student, and for a long time I thought the future was written for other people.",
-        "Getting the chance to study in Singapore changed everything. It was the first time I could choose for myself—and I chose cybersecurity, even though it meant starting over in a new language and culture."
+        "Cybersecurity student at James Cook University with a strong interest in security analysis, behavioural " +
+        "security, and network defence. Received an academic recommendation from the lecturer of Cybersecurity " +
+        "Infrastructure and Management for strong performance and professionalism in my studies.",
+
+        "Experienced team lead in several class projects, guiding groups through design thinking and rapid " +
+        "prototyping tasks. I enjoy learning through hands-on practice and can quickly adapt to new tools and " +
+        "concepts. In my free time, I explore software development and build small iOS apps to broaden my technical " +
+        "skills.",
+
+        "Expect to achieve development in a real-world security environment and contribute to analysis, defence, " +
+        "and behaviour-oriented security work."
     ],
 
     aboutEducationTitle: "Education",
     aboutEducationList: [
         {
             school: "James Cook University, Singapore",
-            period: "2023 – Present",
-            details: "BSc in Cybersecurity. Coursework in network defence, behavioural security, and secure application design."
-        },
-        {
-            school: "James Cook University, Brisbane (exchange)",
-            period: "2024",
-            details: "Semester abroad focused on digital forensics and cloud security operations."
+            period: "May 2024 – Expected Dec 2026",
+            details: "Bachelor of Cybersecurity "
         }
     ],
 
@@ -141,4 +137,5 @@ const TEXT = {
 
     aboutFooterLeft: "Open to learning, internships, and new challenges.",
     aboutFooterContactText: "Email me"
+    // About Page END
 };

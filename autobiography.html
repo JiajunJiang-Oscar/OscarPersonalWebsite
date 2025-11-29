@@ -70,7 +70,6 @@
                 <aside class="card">
                     <div class="card-title" id="autobiography-focus-title"></div>
                     <ul class="card-list" id="autobiography-focus-list"></ul>
-                    <div class="pill-row" id="autobiography-pill-row"></div>
                 </aside>
             </div>
         </div>
@@ -163,13 +162,6 @@
     if (focusListEl && Array.isArray(TEXT.autobiographyMeText)) {
       focusListEl.innerHTML = TEXT.autobiographyMeText
         .map(item => `<li>${item}</li>`)
-        .join('');
-    }
-
-    const pillRowEl = document.getElementById('autobiography-pill-row');
-    if (pillRowEl && Array.isArray(TEXT.autobiographyPills)) {
-      pillRowEl.innerHTML = TEXT.autobiographyPills
-        .map(pill => `<span class="pill">${pill}</span>`)
         .join('');
     }
 
