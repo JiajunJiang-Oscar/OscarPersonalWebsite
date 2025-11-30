@@ -90,6 +90,8 @@
         <a href="index.html#home" data-text="nav-home"></a>
         <a href="about.html#about" data-text="nav-about"></a>
         <a href="blog.html#blog" data-text="nav-blog"></a>
+        <a href="skill.html#skill" data-text="nav-skill"></a>
+        <a href="project.html#project" data-text="nav-project"></a>
     </div>
 </nav>
 
@@ -175,13 +177,17 @@
       footerContactEl.textContent = TEXT.autobiographyFooterContactText;
     }
 
-    const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
-    const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
-    const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');
+    const navHomeEls    = document.querySelectorAll('[data-text="nav-home"]');
+    const navAboutEls   = document.querySelectorAll('[data-text="nav-about"]');
+    const navBlogEls    = document.querySelectorAll('[data-text="nav-blog"]');
+    const navSkillEls   = document.querySelectorAll('[data-text="nav-skill"]');
+    const navProjectEls = document.querySelectorAll('[data-text="nav-project"]');
 
-    navHomeEls.forEach(el  => TEXT.navHome  && (el.textContent  = TEXT.navHome));
-    navAboutEls.forEach(el => TEXT.navAbout && (el.textContent = TEXT.navAbout));
-    navBlogEls.forEach(el  => TEXT.navBlog  && (el.textContent  = TEXT.navBlog));
+    navHomeEls.forEach(el    => TEXT.navHome    && (el.textContent = TEXT.navHome));
+    navAboutEls.forEach(el   => TEXT.navAbout   && (el.textContent = TEXT.navAbout));
+    navBlogEls.forEach(el    => TEXT.navBlog    && (el.textContent = TEXT.navBlog));
+    navSkillEls.forEach(el   => TEXT.navSkill   && (el.textContent = TEXT.navSkill));
+    navProjectEls.forEach(el => TEXT.navProject && (el.textContent = TEXT.navProject));
 
     // 页面 title
     if (TEXT.autobiographyPageTitle) {

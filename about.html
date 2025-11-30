@@ -92,11 +92,13 @@
         <article class="card-secondary">
           <h2 class="card-title" data-text="about-skills-title"></h2>
           <div class="skills-grid" id="about-skills-grid"></div>
+          <div class="card-footer-text" id="about-skills-footer"></div>
         </article>
 
         <article class="card-secondary">
           <h2 class="card-title" data-text="about-projects-title"></h2>
           <ul class="list-styled projects-list" id="about-projects-list"></ul>
+          <div class="card-footer-text" id="about-projects-footer"></div>
         </article>
 
         <article class="card-secondary">
@@ -126,6 +128,8 @@
       <a href="index.html#home" data-text="nav-home"></a>
       <a href="about.html#about" data-text="nav-about"></a>
       <a href="blog.html#blog" data-text="nav-blog"></a>
+      <a href="skill.html#skill" data-text="nav-skill"></a>
+      <a href="project.html#project" data-text="nav-project"></a>
     </div>
   </nav>
 
@@ -224,9 +228,15 @@
 
     const skillsGridEl = document.getElementById('about-skills-grid');
     if (skillsGridEl && Array.isArray(TEXT.aboutSkillsList)) {
-      skillsGridEl.innerHTML = TEXT.aboutSkillsList
-        .map(skill => `<span class="chip">${skill}</span>`)
+      const skillsHtml = TEXT.aboutSkillsList
+        .map(skill => `<a href="skill.html" class="chip">${skill}</a>`)
         .join('');
+      skillsGridEl.innerHTML = skillsHtml + '<span class="chip-ellipsis">...</span>';
+    }
+
+    const skillsFooterEl = document.getElementById('about-skills-footer');
+    if (skillsFooterEl && TEXT.aboutSkillsFooter) {
+      skillsFooterEl.textContent = TEXT.aboutSkillsFooter;
     }
 
     // Projects
@@ -235,9 +245,15 @@
 
     const projectsListEl = document.getElementById('about-projects-list');
     if (projectsListEl && Array.isArray(TEXT.aboutProjectsList)) {
-      projectsListEl.innerHTML = TEXT.aboutProjectsList
-        .map(project => `<li><span>${project.name}</span> — ${project.description}</li>`)
+      const projectsHtml = TEXT.aboutProjectsList
+        .map(project => `<li><a href="project.html"><span>${project.name}</span> — ${project.description}</a></li>`)
         .join('');
+      projectsListEl.innerHTML = projectsHtml + '<li class="ellipsis-item">...</li>';
+    }
+
+    const projectsFooterEl = document.getElementById('about-projects-footer');
+    if (projectsFooterEl && TEXT.aboutProjectsFooter) {
+      projectsFooterEl.textContent = TEXT.aboutProjectsFooter;
     }
 
     // Experience
@@ -274,13 +290,17 @@
     }
 
     // 顶部导航文字
-    const navHomeEls  = document.querySelectorAll('[data-text="nav-home"]');
-    const navAboutEls = document.querySelectorAll('[data-text="nav-about"]');
-    const navBlogEls  = document.querySelectorAll('[data-text="nav-blog"]');
+    const navHomeEls    = document.querySelectorAll('[data-text="nav-home"]');
+    const navAboutEls   = document.querySelectorAll('[data-text="nav-about"]');
+    const navBlogEls    = document.querySelectorAll('[data-text="nav-blog"]');
+    const navSkillEls   = document.querySelectorAll('[data-text="nav-skill"]');
+    const navProjectEls = document.querySelectorAll('[data-text="nav-project"]');
 
-    navHomeEls.forEach(el  => TEXT.navHome  && (el.textContent  = TEXT.navHome));
-    navAboutEls.forEach(el => TEXT.navAbout && (el.textContent = TEXT.navAbout));
-    navBlogEls.forEach(el  => TEXT.navBlog  && (el.textContent  = TEXT.navBlog));
+    navHomeEls.forEach(el    => TEXT.navHome    && (el.textContent = TEXT.navHome));
+    navAboutEls.forEach(el   => TEXT.navAbout   && (el.textContent = TEXT.navAbout));
+    navBlogEls.forEach(el    => TEXT.navBlog    && (el.textContent = TEXT.navBlog));
+    navSkillEls.forEach(el   => TEXT.navSkill   && (el.textContent = TEXT.navSkill));
+    navProjectEls.forEach(el => TEXT.navProject && (el.textContent = TEXT.navProject));
 
     // 页面载入时让内容淡入
     document.addEventListener('DOMContentLoaded', () => {

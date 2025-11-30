@@ -2,71 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Blog – Oscar</title>
+  <title>Skills – Oscar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="CSS/global_1.css" />
-
-  <style>
-
-    /* 居中 “Upcoming” 卡片 */
-    .blog-upcoming-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .blog-upcoming-card {
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: 1.25rem;
-      padding: 2rem 2.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .blog-upcoming-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .blog-upcoming-text {
-      font-size: 0.96rem;
-      color: #d1d5db;
-      line-height: 1.6;
-    }
-
-  </style>
 </head>
 <body>
-  <div class="page" id="blog">
+  <div class="page" id="skill">
     <header class="hero-header">
-      <a href="index.html#home" class="logo">OSCAR</a>
+      <a href="index.html#home" class="logo" data-text="brand-name"></a>
 
       <div class="right-controls">
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/jiajun-jiang-b44397331" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/jiajun-jiang-b44397331"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <span>·</span>
-          <a href="https://www.instagram.com/oscarjiang092/" aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/oscarjiang092/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-instagram"></i>
           </a>
           <span>·</span>
-          <a href="https://github.com/JiajunJiang-Oscar" aria-label="Github">
+          <a
+            href="https://github.com/JiajunJiang-Oscar"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
 
-        <button class="lang-toggle" type="button" aria-label="Switch language">
-          <span class="lang-option active">EN</span>
-          <span class="lang-separator">/</span>
-          <span class="lang-option">CN</span>
-        </button>
-
-        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
           <span class="menu-bar bar-top"></span>
           <span class="menu-bar bar-middle"></span>
           <span class="menu-bar bar-bottom"></span>
@@ -74,35 +54,20 @@
       </div>
     </header>
 
-    <!-- Body -->
     <main>
-      <div class="section-label">BLOG</div>
-      <h1 class="page-title">Blog</h1>
-      <p class="page-tagline">
-        Notes, experiments, and reflections on security and software – coming soon.
-      </p>
-
-      <div class="blog-upcoming-wrapper">
-        <div class="blog-upcoming-card">
-          <div class="blog-upcoming-title">Upcoming</div>
-          <p class="blog-upcoming-text">
-            I’m still setting up this space. In the future, this is where I’ll share write-ups on labs, small tools I build, and things I learn along the way.
-            <br><br>
-            For now, you can check my projects on GitHub or connect with me on LinkedIn.
-          </p>
-        </div>
-      </div>
+      <div class="section-label">SKILLS</div>
+      <h1 class="page-title">Skills</h1>
+      <p class="page-tagline">Coming soon...</p>
     </main>
 
     <footer>
-      <span>Open to learning, internships, and new challenges.</span>
+      <span data-text="about-footer-left"></span>
       <span>
-        <a href="mailto:your@email.com">Email me</a>
+        <a href="mailto:your@email.com" data-text="about-footer-contact"></a>
       </span>
     </footer>
   </div>
 
-  <!-- 右侧弹出导航 -->
   <nav class="nav-overlay" aria-hidden="true">
     <button class="nav-close" aria-label="Close navigation">×</button>
     <div class="nav-menu">
@@ -116,12 +81,6 @@
 
   <script src="Content.js"></script>
   <script>
-    // 页面淡入
-    window.addEventListener("load", () => {
-      document.querySelector(".page")?.classList.add("fade-in");
-    });
-
-    // 菜单逻辑（和 About 一样）
     const menuToggle = document.querySelector('.menu-toggle');
     const navOverlay = document.querySelector('.nav-overlay');
     const navClose   = document.querySelector('.nav-close');
@@ -133,6 +92,7 @@
       menuToggle.setAttribute('aria-expanded', 'true');
       navOverlay.setAttribute('aria-hidden', 'false');
     }
+
     function closeMenu() {
       menuToggle.classList.remove('open');
       navOverlay.classList.remove('open');
@@ -146,10 +106,29 @@
         isOpen ? closeMenu() : openMenu();
       });
     }
-    navClose?.addEventListener('click', closeMenu);
-    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+    if (navClose) {
+      navClose.addEventListener('click', closeMenu);
+    }
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
 
-    // 导航文字注入
+    // 文案注入
+    const logoEl = document.querySelector('[data-text="brand-name"]');
+    if (logoEl && TEXT.logoText) {
+      logoEl.textContent = TEXT.logoText;
+    }
+
+    const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
+    const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
+
+    if (footerLeftEl && TEXT.aboutFooterLeft) {
+      footerLeftEl.textContent = TEXT.aboutFooterLeft;
+    }
+    if (footerContactEl && TEXT.aboutFooterContactText) {
+      footerContactEl.textContent = TEXT.aboutFooterContactText;
+    }
+
     const navHomeEls    = document.querySelectorAll('[data-text="nav-home"]');
     const navAboutEls   = document.querySelectorAll('[data-text="nav-about"]');
     const navBlogEls    = document.querySelectorAll('[data-text="nav-blog"]');
@@ -161,6 +140,14 @@
     navBlogEls.forEach(el    => TEXT.navBlog    && (el.textContent = TEXT.navBlog));
     navSkillEls.forEach(el   => TEXT.navSkill   && (el.textContent = TEXT.navSkill));
     navProjectEls.forEach(el => TEXT.navProject && (el.textContent = TEXT.navProject));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const pageEl = document.getElementById('skill');
+      if (pageEl) {
+        requestAnimationFrame(() => pageEl.classList.add('fade-in'));
+      }
+    });
   </script>
 </body>
 </html>
+

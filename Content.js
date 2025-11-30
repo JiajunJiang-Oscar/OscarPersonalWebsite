@@ -6,6 +6,8 @@ const TEXT = {
     navHome: "Home",
     navAbout: "About",
     navBlog: "Blog",
+    navSkill: "Skills",
+    navProject: "Projects",
 
     logoText: "OSCAR",
 
@@ -103,6 +105,7 @@ const TEXT = {
     ],
 
     aboutSkillsTitle: "Skills",
+    aboutSkillsFooter: "For more skills, please go to the page My Skills.",
     aboutSkillsList: [
         "Mandarin Chinese (Native)",
         "English",
@@ -111,48 +114,24 @@ const TEXT = {
         "Swift",
         "C++",
         "R",
-        "Kali Linux",
-        "Ubuntu",
-        "Metasploit Framework",
-        "OPNsense",
-        "Wireshark",
         "Penetration testing",
-        "firewall rule configuration",
-        "network fundamentals",
-        "Command execution payloads (lab environments)",
         "Microsoft Word",
         "Microsoft Excel",
         "Microsoft PowerPoint",
         "Git",
-        "GitHub",
-        "VS Code",
-        "PyCharm",
-        "Xcode",
         "Android Studio",
         "MySQL",
         "Android, iOS development",
         "HTML / CSS / JavaScript",
     ],
 
-    aboutProjectsTitle: "Projects (For more projects, please go to the page My Projects.)",
+    aboutProjectsTitle: "Projects",
+    aboutProjectsFooter: "For more projects, please go to the page My Projects.",
     aboutProjectsList: [
         {
             name: "Stuxnet Malware Analysis (Academic Research)",
             description: "Analysed Stuxnet’s attack chain, ICS/SCADA manipulation techniques, and self-limiting " +
                 "behaviour; received High Distinction."
-        },
-        {
-            name: "OPNsense Firewall Implementation and Penetration Testing (Project Report)",
-            description: "Designed and deployed a secure network architecture using OPNsense, created multiple custom " +
-                "firewall rules (IP/domain blocking, HTTP/FTP restriction, GUI access control), enabled traffic " +
-                "logging, and verified effectiveness using Nmap, Metasploit, curl and DNS enumeration. Received High " +
-                "Distinction."
-        },
-        {
-            name: "Health Studio – Android Wellness App (Open Source)",
-            description: "Kotlin · Jetpack Compose · Local Storage. Built an Android app for health tracking with " +
-                "clean Compose UI and modular architecture. Implemented persistent local storage to save and " +
-                "retrieve user wellness records. Published as an open-source project with structured documentation."
         },
         {
             name: "Swift Student Challenge – Cybersecurity Card Game (In Progress)",

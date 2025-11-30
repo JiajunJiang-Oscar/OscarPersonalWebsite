@@ -59,6 +59,8 @@
       <a href="index.html" class="hero-cta"></a>
       <a href="about.html" class="hero-cta"></a>
       <a href="blog.html" class="hero-cta"></a>
+      <a href="skill.html" class="hero-cta"></a>
+      <a href="project.html" class="hero-cta"></a>
     </div>
   </nav>
 
@@ -115,10 +117,12 @@
       ctaEl.textContent = TEXT.heroSubtitle;
     }
 
-    if (navLinks.length >= 3) {
-      if (TEXT.navHome)  navLinks[0].textContent = TEXT.navHome;
-      if (TEXT.navAbout) navLinks[1].textContent = TEXT.navAbout;
-      if (TEXT.navBlog)  navLinks[2].textContent = TEXT.navBlog;
+    if (navLinks.length >= 5) {
+      if (TEXT.navHome)    navLinks[0].textContent = TEXT.navHome;
+      if (TEXT.navAbout)   navLinks[1].textContent = TEXT.navAbout;
+      if (TEXT.navBlog)    navLinks[2].textContent = TEXT.navBlog;
+      if (TEXT.navSkill)   navLinks[3].textContent = TEXT.navSkill;
+      if (TEXT.navProject) navLinks[4].textContent = TEXT.navProject;
     }
   </script>
 </body>
