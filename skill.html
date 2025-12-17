@@ -85,6 +85,11 @@
           <h2 class="card-title" data-text="skill-card5-title"></h2>
           <div class="card-subtitle" data-text="skill-card5-subtitle"></div>
         </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card6-title"></h2>
+          <div class="card-subtitle" data-text="skill-card6-subtitle"></div>
+        </article>
       </section>
     </main>
 
@@ -160,27 +165,32 @@
     const card1TitleEl = document.querySelector('[data-text="skill-card1-title"]');
     const card1SubtitleEl = document.querySelector('[data-text="skill-card1-subtitle"]');
     if (card1TitleEl && TEXT.skillCard1Title) card1TitleEl.textContent = TEXT.skillCard1Title;
-    if (card1SubtitleEl && TEXT.skillCard1Subtitle) card1SubtitleEl.textContent = TEXT.skillCard1Subtitle;
+    if (card1SubtitleEl && TEXT.skillCard1Subtitle) card1SubtitleEl.innerHTML = TEXT.skillCard1Subtitle;
 
     const card2TitleEl = document.querySelector('[data-text="skill-card2-title"]');
     const card2SubtitleEl = document.querySelector('[data-text="skill-card2-subtitle"]');
     if (card2TitleEl && TEXT.skillCard2Title) card2TitleEl.textContent = TEXT.skillCard2Title;
-    if (card2SubtitleEl && TEXT.skillCard2Subtitle) card2SubtitleEl.textContent = TEXT.skillCard2Subtitle;
+    if (card2SubtitleEl && TEXT.skillCard2Subtitle) card2SubtitleEl.innerHTML = TEXT.skillCard2Subtitle;
 
     const card3TitleEl = document.querySelector('[data-text="skill-card3-title"]');
     const card3SubtitleEl = document.querySelector('[data-text="skill-card3-subtitle"]');
     if (card3TitleEl && TEXT.skillCard3Title) card3TitleEl.textContent = TEXT.skillCard3Title;
-    if (card3SubtitleEl && TEXT.skillCard3Subtitle) card3SubtitleEl.textContent = TEXT.skillCard3Subtitle;
+    if (card3SubtitleEl && TEXT.skillCard3Subtitle) card3SubtitleEl.innerHTML = TEXT.skillCard3Subtitle;
 
     const card4TitleEl = document.querySelector('[data-text="skill-card4-title"]');
     const card4SubtitleEl = document.querySelector('[data-text="skill-card4-subtitle"]');
     if (card4TitleEl && TEXT.skillCard4Title) card4TitleEl.textContent = TEXT.skillCard4Title;
-    if (card4SubtitleEl && TEXT.skillCard4Subtitle) card4SubtitleEl.textContent = TEXT.skillCard4Subtitle;
+    if (card4SubtitleEl && TEXT.skillCard4Subtitle) card4SubtitleEl.innerHTML = TEXT.skillCard4Subtitle;
 
     const card5TitleEl = document.querySelector('[data-text="skill-card5-title"]');
     const card5SubtitleEl = document.querySelector('[data-text="skill-card5-subtitle"]');
     if (card5TitleEl && TEXT.skillCard5Title) card5TitleEl.textContent = TEXT.skillCard5Title;
-    if (card5SubtitleEl && TEXT.skillCard5Subtitle) card5SubtitleEl.textContent = TEXT.skillCard5Subtitle;
+    if (card5SubtitleEl && TEXT.skillCard5Subtitle) card5SubtitleEl.innerHTML = TEXT.skillCard5Subtitle;
+
+    const card6TitleEl = document.querySelector('[data-text="skill-card6-title"]');
+    const card6SubtitleEl = document.querySelector('[data-text="skill-card6-subtitle"]');
+    if (card6TitleEl && TEXT.skillCard6Title) card6TitleEl.textContent = TEXT.skillCard6Title;
+    if (card6SubtitleEl && TEXT.skillCard6Subtitle) card6SubtitleEl.innerHTML = TEXT.skillCard6Subtitle;
 
     // 页脚
     const footerLeftEl    = document.querySelector('[data-text="skill-footer-left"]');

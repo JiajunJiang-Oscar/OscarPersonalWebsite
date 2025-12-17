@@ -105,7 +105,7 @@ const TEXT = {
     ],
 
     aboutSkillsTitle: "Skills",
-    aboutSkillsFooter: "For more skills, please go to the page My Skills.",
+    aboutSkillsFooter: "Click here to see all my skills",
     aboutSkillsList: [
         "Mandarin Chinese (Native)",
         "English",
@@ -126,7 +126,7 @@ const TEXT = {
     ],
 
     aboutProjectsTitle: "Projects",
-    aboutProjectsFooter: "For more projects, please go to the page My Projects.",
+    aboutProjectsFooter: "Click here to see all my projects",
     aboutProjectsList: [
         {
             name: "Stuxnet Malware Analysis (Academic Research)",
@@ -198,20 +198,30 @@ const TEXT = {
 
     skillPageTitle: "Skills – Oscar",
 
-    skillCard1Title: "Skill Category 1",
-    skillCard1Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+    skillCard1Title: "Skill - Language",
+    skillCard1Subtitle: "English (Advanced)<br>Mandarin Chinese (Native)",
 
-    skillCard2Title: "Skill Category 2",
-    skillCard2Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+    skillCard2Title: "Skill - Professional Skills",
+    skillCard2Subtitle: "Team collaboration in project-based environments<br>" +
+        "Patient and persistent when solving technical problems<br>" +
+        "Ability to work independently with minimal supervision<br>" +
+        "Strong self-learning capability<br>" +
+        "Responsible and reliable task execution<br>" +
+        "Helped guide team discussions toward problem resolution<br>",
 
-    skillCard3Title: "Skill Category 3",
-    skillCard3Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+    skillCard3Title: "Skill - Programming Languages",
+    skillCard3Subtitle: "Python (proficient)<br>Kotlin (Android)<br>Swift (iOS)<br>C++<br>R",
 
-    skillCard4Title: "Skill Category 4",
-    skillCard4Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+    skillCard4Title: "Skill - Software & Tools",
+    skillCard4Subtitle: "Microsoft Word, Excel, <br>Git<br>GitHub<br>Microsoft VS Code<br>PyCharm" +
+        "<br>Xcode<br>Android Studio<br>MySQL",
 
-    skillCard5Title: "Skill Category 5",
-    skillCard5Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+    skillCard5Title: "Skill - Cybersecurity & Networking",
+    skillCard5Subtitle: "Kali Linux<br>Ubuntu<br>Metasploit Framework<br>OPNsense<br>Wireshark<br>Basic penetration " +
+        "testing, firewall rule configuration, network fundamentals, Command execution payloads (lab environments)",
+
+    skillCard6Title: "Skill - Software Development",
+    skillCard6Subtitle: "Android<br>iOS development<br>HTML / CSS / JavaScript",
 
     skillFooterLeft: "Open to learning, internships, and new challenges.",
     skillFooterContactText: "Email me"
