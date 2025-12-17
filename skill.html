@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="CSS/global_1.css" />
+  <link rel="stylesheet" href="CSS/about.css" />
 </head>
 <body>
   <div class="page" id="skill">
@@ -55,15 +56,42 @@
     </header>
 
     <main>
-      <div class="section-label">SKILLS</div>
-      <h1 class="page-title">Skills</h1>
-      <p class="page-tagline">Coming soon...</p>
+      <div class="section-label" data-text="skill-section-label"></div>
+      <h1 class="about-title" data-text="skill-heading"></h1>
+      <p class="about-tagline" data-text="skill-tagline"></p>
+
+      <section class="stack-v">
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card1-title"></h2>
+          <div class="card-subtitle" data-text="skill-card1-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card2-title"></h2>
+          <div class="card-subtitle" data-text="skill-card2-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card3-title"></h2>
+          <div class="card-subtitle" data-text="skill-card3-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card4-title"></h2>
+          <div class="card-subtitle" data-text="skill-card4-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="skill-card5-title"></h2>
+          <div class="card-subtitle" data-text="skill-card5-subtitle"></div>
+        </article>
+      </section>
     </main>
 
     <footer>
-      <span data-text="about-footer-left"></span>
+      <span data-text="skill-footer-left"></span>
       <span>
-        <a href="jjj0929@outlook.com" data-text="about-footer-contact"></a>
+        <a href="mailto:jjj0929@outlook.com" data-text="skill-footer-contact"></a>
       </span>
     </footer>
   </div>
@@ -119,14 +147,55 @@
       logoEl.textContent = TEXT.logoText;
     }
 
-    const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
-    const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
+    // 页面标题和标签
+    const skillLabelEl   = document.querySelector('[data-text="skill-section-label"]');
+    const skillHeadingEl = document.querySelector('[data-text="skill-heading"]');
+    const skillTaglineEl = document.querySelector('[data-text="skill-tagline"]');
 
-    if (footerLeftEl && TEXT.aboutFooterLeft) {
-      footerLeftEl.textContent = TEXT.aboutFooterLeft;
+    if (skillLabelEl && TEXT.skillSectionLabel) skillLabelEl.textContent = TEXT.skillSectionLabel;
+    if (skillHeadingEl && TEXT.skillHeading)    skillHeadingEl.textContent = TEXT.skillHeading;
+    if (skillTaglineEl && TEXT.skillTagline)      skillTaglineEl.textContent = TEXT.skillTagline;
+
+    // 技能卡片
+    const card1TitleEl = document.querySelector('[data-text="skill-card1-title"]');
+    const card1SubtitleEl = document.querySelector('[data-text="skill-card1-subtitle"]');
+    if (card1TitleEl && TEXT.skillCard1Title) card1TitleEl.textContent = TEXT.skillCard1Title;
+    if (card1SubtitleEl && TEXT.skillCard1Subtitle) card1SubtitleEl.textContent = TEXT.skillCard1Subtitle;
+
+    const card2TitleEl = document.querySelector('[data-text="skill-card2-title"]');
+    const card2SubtitleEl = document.querySelector('[data-text="skill-card2-subtitle"]');
+    if (card2TitleEl && TEXT.skillCard2Title) card2TitleEl.textContent = TEXT.skillCard2Title;
+    if (card2SubtitleEl && TEXT.skillCard2Subtitle) card2SubtitleEl.textContent = TEXT.skillCard2Subtitle;
+
+    const card3TitleEl = document.querySelector('[data-text="skill-card3-title"]');
+    const card3SubtitleEl = document.querySelector('[data-text="skill-card3-subtitle"]');
+    if (card3TitleEl && TEXT.skillCard3Title) card3TitleEl.textContent = TEXT.skillCard3Title;
+    if (card3SubtitleEl && TEXT.skillCard3Subtitle) card3SubtitleEl.textContent = TEXT.skillCard3Subtitle;
+
+    const card4TitleEl = document.querySelector('[data-text="skill-card4-title"]');
+    const card4SubtitleEl = document.querySelector('[data-text="skill-card4-subtitle"]');
+    if (card4TitleEl && TEXT.skillCard4Title) card4TitleEl.textContent = TEXT.skillCard4Title;
+    if (card4SubtitleEl && TEXT.skillCard4Subtitle) card4SubtitleEl.textContent = TEXT.skillCard4Subtitle;
+
+    const card5TitleEl = document.querySelector('[data-text="skill-card5-title"]');
+    const card5SubtitleEl = document.querySelector('[data-text="skill-card5-subtitle"]');
+    if (card5TitleEl && TEXT.skillCard5Title) card5TitleEl.textContent = TEXT.skillCard5Title;
+    if (card5SubtitleEl && TEXT.skillCard5Subtitle) card5SubtitleEl.textContent = TEXT.skillCard5Subtitle;
+
+    // 页脚
+    const footerLeftEl    = document.querySelector('[data-text="skill-footer-left"]');
+    const footerContactEl = document.querySelector('[data-text="skill-footer-contact"]');
+
+    if (footerLeftEl && TEXT.skillFooterLeft) {
+      footerLeftEl.textContent = TEXT.skillFooterLeft;
     }
-    if (footerContactEl && TEXT.aboutFooterContactText) {
-      footerContactEl.textContent = TEXT.aboutFooterContactText;
+    if (footerContactEl && TEXT.skillFooterContactText) {
+      footerContactEl.textContent = TEXT.skillFooterContactText;
+    }
+
+    // 页面标题
+    if (TEXT.skillPageTitle) {
+      document.title = TEXT.skillPageTitle;
     }
 
     const navHomeEls    = document.querySelectorAll('[data-text="nav-home"]');

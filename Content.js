@@ -162,6 +162,58 @@ const TEXT = {
     ],
 
     aboutFooterLeft: "Open to learning, internships, and new challenges.",
-    aboutFooterContactText: "Email me"
+    aboutFooterContactText: "Email me",
     // About Page END
+
+    // Project Page
+    projectSectionLabel: "PROJECTS",
+    projectHeading: "Projects",
+    projectTagline: "A collection of my work and experiments.",
+
+    projectPageTitle: "Projects – Oscar",
+
+    projectCard1Title: "Project Title 1",
+    projectCard1Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+
+    projectCard2Title: "Project Title 2",
+    projectCard2Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+
+    projectCard3Title: "Project Title 3",
+    projectCard3Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+
+    projectCard4Title: "Project Title 4",
+    projectCard4Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+
+    projectCard5Title: "Project Title 5",
+    projectCard5Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+
+    projectFooterLeft: "Open to learning, internships, and new challenges.",
+    projectFooterContactText: "Email me",
+    // Project Page END
+
+    // Skill Page
+    skillSectionLabel: "SKILLS",
+    skillHeading: "Skills",
+    skillTagline: "A collection of my technical skills and expertise.",
+
+    skillPageTitle: "Skills – Oscar",
+
+    skillCard1Title: "Skill Category 1",
+    skillCard1Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+
+    skillCard2Title: "Skill Category 2",
+    skillCard2Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+
+    skillCard3Title: "Skill Category 3",
+    skillCard3Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+
+    skillCard4Title: "Skill Category 4",
+    skillCard4Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+
+    skillCard5Title: "Skill Category 5",
+    skillCard5Subtitle: "Skill description or details go here. You can edit this in Content.js.",
+
+    skillFooterLeft: "Open to learning, internships, and new challenges.",
+    skillFooterContactText: "Email me"
+    // Skill Page END
 };

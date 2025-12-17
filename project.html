@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="CSS/global_1.css" />
+  <link rel="stylesheet" href="CSS/about.css" />
 </head>
 <body>
   <div class="page" id="project">
@@ -55,15 +56,42 @@
     </header>
 
     <main>
-      <div class="section-label">PROJECTS</div>
-      <h1 class="page-title">Projects</h1>
-      <p class="page-tagline">Coming soon...</p>
+      <div class="section-label" data-text="project-section-label"></div>
+      <h1 class="about-title" data-text="project-heading"></h1>
+      <p class="about-tagline" data-text="project-tagline"></p>
+
+      <section class="stack-v">
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card1-title"></h2>
+          <div class="card-subtitle" data-text="project-card1-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card2-title"></h2>
+          <div class="card-subtitle" data-text="project-card2-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card3-title"></h2>
+          <div class="card-subtitle" data-text="project-card3-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card4-title"></h2>
+          <div class="card-subtitle" data-text="project-card4-subtitle"></div>
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card5-title"></h2>
+          <div class="card-subtitle" data-text="project-card5-subtitle"></div>
+        </article>
+      </section>
     </main>
 
     <footer>
-      <span data-text="about-footer-left"></span>
+      <span data-text="project-footer-left"></span>
       <span>
-        <a href="jjj0929@outlook.com" data-text="about-footer-contact"></a>
+        <a href="mailto:jjj0929@outlook.com" data-text="project-footer-contact"></a>
       </span>
     </footer>
   </div>
@@ -119,14 +147,55 @@
       logoEl.textContent = TEXT.logoText;
     }
 
-    const footerLeftEl    = document.querySelector('[data-text="about-footer-left"]');
-    const footerContactEl = document.querySelector('[data-text="about-footer-contact"]');
+    // 页面标题和标签
+    const projectLabelEl   = document.querySelector('[data-text="project-section-label"]');
+    const projectHeadingEl = document.querySelector('[data-text="project-heading"]');
+    const projectTaglineEl = document.querySelector('[data-text="project-tagline"]');
 
-    if (footerLeftEl && TEXT.aboutFooterLeft) {
-      footerLeftEl.textContent = TEXT.aboutFooterLeft;
+    if (projectLabelEl && TEXT.projectSectionLabel) projectLabelEl.textContent = TEXT.projectSectionLabel;
+    if (projectHeadingEl && TEXT.projectHeading)    projectHeadingEl.textContent = TEXT.projectHeading;
+    if (projectTaglineEl && TEXT.projectTagline)      projectTaglineEl.textContent = TEXT.projectTagline;
+
+    // 项目卡片
+    const card1TitleEl = document.querySelector('[data-text="project-card1-title"]');
+    const card1SubtitleEl = document.querySelector('[data-text="project-card1-subtitle"]');
+    if (card1TitleEl && TEXT.projectCard1Title) card1TitleEl.textContent = TEXT.projectCard1Title;
+    if (card1SubtitleEl && TEXT.projectCard1Subtitle) card1SubtitleEl.textContent = TEXT.projectCard1Subtitle;
+
+    const card2TitleEl = document.querySelector('[data-text="project-card2-title"]');
+    const card2SubtitleEl = document.querySelector('[data-text="project-card2-subtitle"]');
+    if (card2TitleEl && TEXT.projectCard2Title) card2TitleEl.textContent = TEXT.projectCard2Title;
+    if (card2SubtitleEl && TEXT.projectCard2Subtitle) card2SubtitleEl.textContent = TEXT.projectCard2Subtitle;
+
+    const card3TitleEl = document.querySelector('[data-text="project-card3-title"]');
+    const card3SubtitleEl = document.querySelector('[data-text="project-card3-subtitle"]');
+    if (card3TitleEl && TEXT.projectCard3Title) card3TitleEl.textContent = TEXT.projectCard3Title;
+    if (card3SubtitleEl && TEXT.projectCard3Subtitle) card3SubtitleEl.textContent = TEXT.projectCard3Subtitle;
+
+    const card4TitleEl = document.querySelector('[data-text="project-card4-title"]');
+    const card4SubtitleEl = document.querySelector('[data-text="project-card4-subtitle"]');
+    if (card4TitleEl && TEXT.projectCard4Title) card4TitleEl.textContent = TEXT.projectCard4Title;
+    if (card4SubtitleEl && TEXT.projectCard4Subtitle) card4SubtitleEl.textContent = TEXT.projectCard4Subtitle;
+
+    const card5TitleEl = document.querySelector('[data-text="project-card5-title"]');
+    const card5SubtitleEl = document.querySelector('[data-text="project-card5-subtitle"]');
+    if (card5TitleEl && TEXT.projectCard5Title) card5TitleEl.textContent = TEXT.projectCard5Title;
+    if (card5SubtitleEl && TEXT.projectCard5Subtitle) card5SubtitleEl.textContent = TEXT.projectCard5Subtitle;
+
+    // 页脚
+    const footerLeftEl    = document.querySelector('[data-text="project-footer-left"]');
+    const footerContactEl = document.querySelector('[data-text="project-footer-contact"]');
+
+    if (footerLeftEl && TEXT.projectFooterLeft) {
+      footerLeftEl.textContent = TEXT.projectFooterLeft;
     }
-    if (footerContactEl && TEXT.aboutFooterContactText) {
-      footerContactEl.textContent = TEXT.aboutFooterContactText;
+    if (footerContactEl && TEXT.projectFooterContactText) {
+      footerContactEl.textContent = TEXT.projectFooterContactText;
+    }
+
+    // 页面标题
+    if (TEXT.projectPageTitle) {
+      document.title = TEXT.projectPageTitle;
     }
 
     const navHomeEls    = document.querySelectorAll('[data-text="nav-home"]');
