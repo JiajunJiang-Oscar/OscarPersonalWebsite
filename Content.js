@@ -19,45 +19,38 @@ const TEXT = {
 
     // Autobiography Page
     autobiographyParagraphs: [
-        "My name is Jiang Jiajun. You can call me Oscar. I am a student studying cybersecurity at James Cook " +
-        "University. The reason I created this website is to showcase myself in front of everyone and share my story as " +
-        "well as my portfolio during my school years. Hope you will like my work!",
+        "My name is Jiang Jiajun. You can call me Oscar. I am a student studying cybersecurity at James Cook University." +
+        "<br>The reason I created this website is to showcase myself in front of everyone and share my story " +
+        "as well as my portfolio during my school years. Hope you will like my work!",
 
-        "I was born in Tianjin—a northern city that doesn’t chase attention, yet moves with confidence, quietly " +
-        "modern, quietly alive. It’s where I grew up, and where I learned what it means to be ordinary.",
-
-        "In school, I was never the top student.",
-        "Not even close.",
-
-        "My grades were often disappointing, my performance forgettable, and for years I believed that effort didn’t " +
-        "necessarily lead to change. The future felt like something already written for other people, not for me.",
+        "<br>I was born in Tianjin—a northern city that doesn’t chase attention, yet moves with confidence, " +
+        "quietly modern, quietly alive. It’s where I grew up, and where I learned what it means to be ordinary." +
+        "<br>In school, I was never the top student." +
+        "<br>Not even close." +
+        "<br>My grades were often disappointing, my performance forgettable, and for years I believed that effort " +
+        "didn’t necessarily lead to change. The future felt like something already written for other people, not for me.",
 
         "When university applications came, I didn’t get into the major I truly wanted. It wasn’t dramatic—it was a " +
         "dull, heavy kind of resignation. The kind that makes you think maybe this is it, maybe your life is just " +
-        "going to follow a path you never chose.",
+        "going to follow a path you never chose." +
+        "<br>Until I was given a second chance.",
 
-        "Until I was given a second chance.",
-
-        "My parents decided to send me to Singapore for college, and suddenly, for the first time, I was allowed to choose for " +
-        "myself. That moment cracked something open in me-the realization that a life can be rewritten.",
-
-        "So I chose cybersecurity. Not because it was easy, or popular, but because it was the first decision that " +
+        "My parents decided to send me to Singapore for college, and suddenly, for the first time, I was allowed to " +
+        "choose for myself. That moment cracked something open in me-the realization that a life can be rewritten." +
+        "<br>So I chose cybersecurity. Not because it was easy, or popular, but because it was the first decision that " +
         "genuinely felt like mine.",
 
         "The early days were anything but easy. A new language. A new system. A new rhythm I couldn’t follow. Lectures " +
         "blurred together, assignments stacked faster than I could clear them, and the pressure sat heavy on my " +
-        "chest—quiet, persistent, suffocating.",
+        "chest—quiet, persistent, suffocating." +
+        "<br>But back then, I told myself:" +
+        "<br>If this was the path I chose, then I would walk it. Even if it scraped me raw, even if I had to crawl through it." +
+        "<br>So I kept going—teeth clenched, sleeves rolled. From barely understanding, to slowly keeping pace; from " +
+        "surviving on willpower, to finally thinking in the language I learned." +
+        "<br>My skills built themselves quietly, layer by layer. My thoughts sharpened. My understanding took shape. It " +
+        "wasn’t a dramatic transformation—just steady growth, like something unfolding underground." +
+        "<br>And one day when I looked back, I realized. From the moment I arrived in Singapore, my timeline had split. ",
 
-        "But back then, I told myself:",
-        "If this was the path I chose, then I would walk it. Even if it scraped me raw, even if I had to crawl through it.",
-
-        "So I kept going—teeth clenched, sleeves rolled. From barely understanding, to slowly keeping pace; from " +
-        "surviving on willpower, to finally thinking in the language I learned.",
-
-        "My skills built themselves quietly, layer by layer. My thoughts sharpened. My understanding took shape. It " +
-        "wasn’t a dramatic transformation—just steady growth, like something unfolding underground.",
-
-        "And one day when I looked back, I realized. From the moment I arrived in Singapore, my timeline had split. " +
         "That was the beginning of my second life the first chapter I ever wrote myself."
     ],
 
@@ -172,20 +165,32 @@ const TEXT = {
 
     projectPageTitle: "Projects – Oscar",
 
-    projectCard1Title: "Project Title 1",
-    projectCard1Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+    projectCard1Title: "Stuxnet Malware Analysis (Academic Research)",
+    projectCard1Subtitle: "Analysed Stuxnet’s attack chain, ICS/SCADA manipulation techniques, and self-limiting " +
+        "behaviour; received High Distinction.",
 
-    projectCard2Title: "Project Title 2",
-    projectCard2Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+    projectCard2Title: "OPNsense Firewall Implementation and Penetration Testing (Project Report)",
+    projectCard2Subtitle: "Designed and deployed a secure network architecture using OPNsense, created multiple " +
+        "custom firewall rules (IP/domain blocking, HTTP/FTP restriction, GUI access control), enabled traffic " +
+        "logging, and verified effectiveness using Nmap, Metasploit, curl and DNS enumeration. Received High " +
+        "Distinction.",
 
-    projectCard3Title: "Project Title 3",
-    projectCard3Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+    projectCard3Title: "Health Studio – Android Wellness App (Open Source)",
+    projectCard3Subtitle: "Kotlin · Jetpack Compose · Local Storage" +
+        "<br>Built an Android app for health tracking with clean Compose UI and modular architecture." +
+        "<br>Implemented persistent local storage to save and retrieve user wellness records." +
+        "<br>Published as an open-source project with structured documentation.",
 
-    projectCard4Title: "Project Title 4",
-    projectCard4Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+    projectCard4Title: "Website development – personal website",
+    projectCard4Subtitle: "Using HTML, CSS and JavaScript, developed my own website to introduce myself and store my " +
+        "portfolio.",
 
-    projectCard5Title: "Project Title 5",
-    projectCard5Subtitle: "Project subtitle or description goes here. You can edit this in Content.js.",
+    projectCard5Title: "Swift Student Challenge – Cybersecurity Card Game (In Progress)",
+    projectCard5Subtitle: "Building an interactive cybersecurity learning game using Swift-UI, achievement systems, " +
+        "and card-based gameplay mechanics.",
+
+    projectCard6Title: "More Projects Are Coming Soon!",
+    projectCard6Subtitle: "...",
 
     projectFooterLeft: "Open to learning, internships, and new challenges.",
     projectFooterContactText: "Email me",

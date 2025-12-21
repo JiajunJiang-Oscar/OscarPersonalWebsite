@@ -103,6 +103,16 @@ main {
     line-height: 1.7;
     color: #6b7280;
     margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+.card-image {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    display: block;
+    object-fit: cover;
 }
 .card-text {
     font-size: 0.95rem;

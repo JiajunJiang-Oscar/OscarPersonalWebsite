@@ -64,26 +64,42 @@
         <article class="card-secondary">
           <h2 class="card-title" data-text="project-card1-title"></h2>
           <div class="card-subtitle" data-text="project-card1-subtitle"></div>
+          <img src="Assets/Image/card1image.jpeg" alt="Project 1" class="card-image" onerror="this.style.display='none'">
         </article>
 
         <article class="card-secondary">
           <h2 class="card-title" data-text="project-card2-title"></h2>
           <div class="card-subtitle" data-text="project-card2-subtitle"></div>
+          <img src="Assets/Image/card2image.jpg" alt="Project 2" class="card-image" onerror="this.style.display='none'">
         </article>
 
         <article class="card-secondary">
           <h2 class="card-title" data-text="project-card3-title"></h2>
           <div class="card-subtitle" data-text="project-card3-subtitle"></div>
+          <img src="Assets/Image/card3image.jpg" alt="Project 3" class="card-image" onerror="this.style.display='none'">
         </article>
 
         <article class="card-secondary">
           <h2 class="card-title" data-text="project-card4-title"></h2>
           <div class="card-subtitle" data-text="project-card4-subtitle"></div>
+          <img src="Assets/Image/card4image.jpg" alt="Project 4" class="card-image" onerror="this.style.display='none'">
         </article>
 
         <article class="card-secondary">
           <h2 class="card-title" data-text="project-card5-title"></h2>
           <div class="card-subtitle" data-text="project-card5-subtitle"></div>
+          <img src="Assets/Image/card5image.jpg" alt="Project 5" class="card-image" onerror="this.style.display='none'">
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card6-title"></h2>
+          <div class="card-subtitle" data-text="project-card6-subtitle"></div>
+          <img src="Assets/Image/card6image.jpg" alt="Project 6" class="card-image" onerror="this.style.display='none'">
+        </article>
+
+        <article class="card-secondary">
+          <h2 class="card-title" data-text="project-card6-title"></h2>
+          <div class="card-subtitle" data-text="project-card6-subtitle"></div>
         </article>
       </section>
     </main>
@@ -181,6 +197,11 @@
     const card5SubtitleEl = document.querySelector('[data-text="project-card5-subtitle"]');
     if (card5TitleEl && TEXT.projectCard5Title) card5TitleEl.textContent = TEXT.projectCard5Title;
     if (card5SubtitleEl && TEXT.projectCard5Subtitle) card5SubtitleEl.innerHTML = TEXT.projectCard5Subtitle;
+
+    const card6TitleEl = document.querySelector('[data-text="project-card6-title"]');
+    const card6SubtitleEl = document.querySelector('[data-text="project-card6-subtitle"]');
+    if (card6TitleEl && TEXT.projectCard6Title) card6TitleEl.textContent = TEXT.projectCard6Title;
+    if (card6SubtitleEl && TEXT.projectCard6Subtitle) card6SubtitleEl.innerHTML = TEXT.projectCard6Subtitle;
 
     // 页脚
     const footerLeftEl    = document.querySelector('[data-text="project-footer-left"]');
